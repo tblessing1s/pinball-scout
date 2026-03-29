@@ -1,0 +1,110 @@
+export const nearbyLocationSeed = [
+  {
+    id: "logan-arcade",
+    name: "Logan Arcade",
+    city: "Chicago",
+    state: "IL",
+    latitude: 41.9263,
+    longitude: -87.7077,
+    source: "Pinball Map (seeded mock)",
+    region: "midwest",
+    baseDistanceMiles: 8,
+    machineIds: ["godzilla-pro", "deadpool-pro", "foo-fighters-pro", "jurassic-park-pro", "iron-maiden-pro"]
+  },
+  {
+    id: "emporium-wicker",
+    name: "Emporium Wicker Park",
+    city: "Chicago",
+    state: "IL",
+    latitude: 41.9080,
+    longitude: -87.6777,
+    source: "Pinball Map (seeded mock)",
+    region: "midwest",
+    baseDistanceMiles: 14,
+    machineIds: ["godzilla-pro", "mandalorian-pro", "stranger-things-pro", "attack-from-mars-remake"]
+  },
+  {
+    id: "sunray-lanes",
+    name: "Sun Ray Lanes",
+    city: "St. Paul",
+    state: "MN",
+    latitude: 44.9314,
+    longitude: -93.0319,
+    source: "Pinball Map (seeded mock)",
+    region: "midwest",
+    baseDistanceMiles: 22,
+    machineIds: ["deadpool-pro", "iron-maiden-pro", "medieval-madness-remake", "funhouse"]
+  },
+  {
+    id: "next-level",
+    name: "Next Level Pinball Museum",
+    city: "Hillsboro",
+    state: "OR",
+    latitude: 45.5170,
+    longitude: -122.9891,
+    source: "Pinball Map (seeded mock)",
+    region: "west",
+    baseDistanceMiles: 18,
+    machineIds: ["godzilla-pro", "foo-fighters-pro", "attack-from-mars-remake", "funhouse", "fish-tales"]
+  },
+  {
+    id: "free-gold-watch",
+    name: "Free Gold Watch",
+    city: "San Francisco",
+    state: "CA",
+    latitude: 37.7710,
+    longitude: -122.4469,
+    source: "Pinball Map (seeded mock)",
+    region: "west",
+    baseDistanceMiles: 11,
+    machineIds: ["jurassic-park-pro", "stranger-things-pro", "mandalorian-pro", "medieval-madness-remake"]
+  },
+  {
+    id: "district-82",
+    name: "District 82",
+    city: "De Pere",
+    state: "WI",
+    latitude: 44.4489,
+    longitude: -88.0607,
+    source: "Pinball Map (seeded mock)",
+    region: "midwest",
+    baseDistanceMiles: 46,
+    machineIds: ["godzilla-pro", "avengers-infinity-quest-pro", "iron-maiden-pro", "medieval-madness-remake", "attack-from-mars-remake"]
+  },
+  {
+    id: "past-times",
+    name: "Past Times Arcade",
+    city: "Girard",
+    state: "OH",
+    latitude: 41.1534,
+    longitude: -80.7004,
+    source: "Pinball Map (seeded mock)",
+    region: "east",
+    baseDistanceMiles: 24,
+    machineIds: ["godzilla-pro", "deadpool-pro", "funhouse", "fish-tales", "medieval-madness-remake"]
+  },
+  {
+    id: "mom-s-organic",
+    name: "MOM's Organic Pinball",
+    city: "College Park",
+    state: "MD",
+    latitude: 38.9807,
+    longitude: -76.9378,
+    source: "Pinball Map (seeded mock)",
+    region: "east",
+    baseDistanceMiles: 12,
+    machineIds: ["godzilla-pro", "mandalorian-pro", "foo-fighters-pro", "stranger-things-pro"]
+  },
+  {
+    id: "cidercade-austin",
+    name: "Cidercade Austin",
+    city: "Austin",
+    state: "TX",
+    latitude: 30.2239,
+    longitude: -97.7627,
+    source: "Pinball Map (seeded mock)",
+    region: "south",
+    baseDistanceMiles: 16,
+    machineIds: ["godzilla-pro", "jurassic-park-pro", "deadpool-pro", "funhouse"]
+  }
+];

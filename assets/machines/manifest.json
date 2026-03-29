@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Godzilla Pro",
+    "filename": "godzilla_pro.png",
+    "source_page": "https://sternpinball.com/game/godzilla/",
+    "image_url": "https://sternpinball.com/wp-content/uploads/2021/09/Godzilla-Pro-Details-Ambient-1-kj3nra-scaled.jpg",
+    "width": 2560,
+    "height": 1707
+  },
+  {
+    "name": "Deadpool Pro",
+    "filename": "deadpool_pro.png",
+    "source_page": "https://sternpinball.com/game/deadpool/",
+    "image_url": "https://sternpinball.com/wp-content/uploads/2018/09/DP-Pro-Cabinet-RF.png",
+    "width": 1214,
+    "height": 1990
+  },
+  {
+    "name": "Foo Fighters Pro",
+    "filename": "foo_fighters_pro.png",
+    "source_page": "https://sternpinball.com/game/foo-fighters/",
+    "image_url": "https://sternpinball.com/wp-content/uploads/2023/02/FooFighters-Pro-Cabinet-FF-adfadf-scaled.jpg",
+    "width": 1021,
+    "height": 2560
+  },
+  {
+    "name": "Avengers: Infinity Quest Pro",
+    "filename": "avengers_infinity_quest_pro.png",
+    "source_page": "https://sternpinball.com/game/avengers-infinity-quest/",
+    "image_url": "https://sternpinball.com/wp-content/uploads/2020/08/Avengers-Pro-Cabinet-FF-3tnasdf-scaled.jpg",
+    "width": 1019,
+    "height": 2560
+  },
+  {
+    "name": "Jurassic Park Pro",
+    "filename": "jurassic_park_pro.png",
+    "source_page": "https://sternpinball.com/game/jurassic-park/",
+    "image_url": "https://sternpinball.com/wp-content/uploads/2019/07/JurassicPark-Pro-CabinetFF.jpg",
+    "width": 1242,
+    "height": 3014
+  },
+  {
+    "name": "Venom Pro",
+    "filename": "venom_pro.png",
+    "source_page": "https://sternpinball.com/game/venom/",
+    "image_url": "https://sternpinball.com/wp-content/uploads/2023/07/Venom-Pro-Cabinet-FF-aefadf-scaled.jpg",
+    "width": 1017,
+    "height": 2560
+  },
+  {
+    "name": "The Mandalorian Pro",
+    "filename": "the_mandalorian_pro.png",
+    "source_page": "https://sternpinball.com/game/the-mandalorian/",
+    "image_url": "https://sternpinball.com/wp-content/uploads/2021/05/Mandalorian-Pro-Cabinet-FF-01-3hjhad-scaled.jpg",
+    "width": 1050,
+    "height": 2560
+  },
+  {
+    "name": "Iron Maiden Pro",
+    "filename": "iron_maiden_pro.png",
+    "source_page": "https://sternpinball.com/game/iron-maiden/",
+    "image_url": "https://sternpinball.com/wp-content/uploads/2018/10/IM-Pro-CabinetRF-01a.png",
+    "width": 3112,
+    "height": 4939
+  },
+  {
+    "name": "Jaws Pro",
+    "filename": "jaws_pro.png",
+    "source_page": "https://sternpinball.com/game/jaws/",
+    "image_url": "https://sternpinball.com/wp-content/uploads/2024/01/Game-Edition-PRO-3fnakef.png",
+    "width": 3132,
+    "height": 4918
+  },
+  {
+    "name": "Stranger Things Pro",
+    "filename": "stranger_things_pro.png",
+    "source_page": "https://sternpinball.com/game/stranger-things/",
+    "image_url": "https://sternpinball.com/wp-content/uploads/2019/12/StrangerThings-Pro-Cabinet-FF-4gnlkafad-scaled.jpg",
+    "width": 1037,
+    "height": 2560
+  },
+  {
+    "name": "Attack from Mars Remake",
+    "filename": "attack_from_mars_remake.png",
+    "source_page": "https://www.chicago-gaming.com/coinop/attack-from-mars",
+    "image_url": "https://www.chicago-gaming.com/images/afm/banner.webp",
+    "width": 1430,
+    "height": 590
+  },
+  {
+    "name": "Medieval Madness Remake",
+    "filename": "medieval_madness_remake.png",
+    "source_page": "https://www.chicago-gaming.com/coinop/medieval-madness",
+    "image_url": "https://www.chicago-gaming.com/images/mmr/banner4.webp",
+    "width": 1430,
+    "height": 590
+  },
+  {
+    "name": "Monster Bash Remake",
+    "filename": "monster_bash_remake.png",
+    "source_page": "https://www.chicago-gaming.com/coinop/monster-bash",
+    "image_url": "https://www.chicago-gaming.com/images/mb/banner.png",
+    "width": 1430,
+    "height": 355
+  },
+  {
+    "name": "Theatre of Magic",
+    "filename": "theatre_of_magic.png",
+    "source_page": "https://en.wikipedia.org/wiki/Theatre_of_Magic",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/29/Theatre_of_Magic_pinball_flyer.jpg/250px-Theatre_of_Magic_pinball_flyer.jpg",
+    "width": 250,
+    "height": 327
+  },
+  {
+    "name": "Monster Bash",
+    "filename": "monster_bash.png",
+    "source_page": "https://en.wikipedia.org/wiki/Monster_Bash_(pinball)",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/0/02/Monster_Bash_Promotional_Flyer.png/250px-Monster_Bash_Promotional_Flyer.png",
+    "width": 250,
+    "height": 326
+  },
+  {
+    "name": "Tales of the Arabian Nights",
+    "filename": "tales_of_the_arabian_nights.png",
+    "source_page": "https://en.wikipedia.org/wiki/Tales_of_the_Arabian_Nights_(pinball)",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Tales_of_the_Arabian_Nights_Pinball_Flyer.png/250px-Tales_of_the_Arabian_Nights_Pinball_Flyer.png",
+    "width": 250,
+    "height": 324
+  },
+  {
+    "name": "Fish Tales",
+    "filename": "fish_tales.png",
+    "source_page": "https://en.wikipedia.org/wiki/Fish_Tales_(pinball)",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/PinballFishtalesOblique.jpg/330px-PinballFishtalesOblique.jpg",
+    "width": 330,
+    "height": 509
+  },
+  {
+    "name": "FunHouse",
+    "filename": "funhouse.png",
+    "source_page": "https://en.wikipedia.org/wiki/FunHouse_(pinball)",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c5/FunHouse_pinball.jpg/250px-FunHouse_pinball.jpg",
+    "width": 250,
+    "height": 362
+  },
+  {
+    "name": "The Godfather Collector's Edition",
+    "filename": "the_godfather_collector_s_edition.png",
+    "source_page": "https://jerseyjackpinball.com/products/the-godfather-pinball-game-collectors-edition",
+    "image_url": "https://jerseyjackpinball.com/cdn/shop/files/GodFather_CE_Cabinet_copy.png?height=650&v=1744951277",
+    "width": 526,
+    "height": 650
+  },
+  {
+    "name": "Elvira's House of Horrors",
+    "filename": "elvira_s_house_of_horrors.png",
+    "source_page": "https://sternpinball.com/game/elviras-house-of-horrors/",
+    "image_url": "https://sternpinball.com/wp-content/uploads/2019/09/Elvira-Premium-Cabinet-FF-239r83hfisudjhf34.png",
+    "width": 1310,
+    "height": 3300
+  }
+]

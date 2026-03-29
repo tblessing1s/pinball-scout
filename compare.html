@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compare Machines | Pinball Scout</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Pinball Scout</a>
+      <nav>
+        <a href="help.html">Find Your First Pin</a>
+        <a href="help.html#how-to-choose">How to Choose</a>
+        <a href="machines.html">Machines</a>
+        <a href="compare.html" aria-current="page">Compare <span id="compare-count" class="count-pill">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Compare</p>
+          <h1>Compare 2–3 machines side by side</h1>
+        </div>
+        <a class="btn btn-secondary" href="machines.html">Add machines</a>
+      </div>
+      <div id="compare-content"></div>
+    </div>
+  </main>
+
+  <script type="module" src="lib/compare-page.js"></script>
+</body>
+</html>

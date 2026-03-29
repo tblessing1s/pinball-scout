@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pinball Scout | Discover Your First Pin</title>
+  <meta name="description" content="Pinball Scout helps first-time buyers discover which pinball machines fit them best, even if they do not know where to start." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Pinball Scout</a>
+      <nav>
+        <a href="help.html">Find Your First Pin</a>
+        <a href="help.html#how-to-choose">How to Choose</a>
+        <a href="machines.html">Machines</a>
+        <a href="compare.html">Compare <span id="compare-count" class="count-pill">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-home">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">First-time buyer guidance</p>
+          <h1>Choosing your first pinball machine doesn’t have to be overwhelming.</h1>
+          <p class="hero-copy">
+            If you do not already know what machine you want, start with a guided discovery flow. We’ll show you strong candidates with photos and videos, learn from your reactions, and help you validate the shortlist with nearby games you can actually try.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="help.html" data-track="homepage_discovery_click">Find Your First Pin</a>
+            <a class="btn btn-secondary" href="help.html#how-to-choose" data-track="homepage_how_click">How first-time buyers should choose</a>
+          </div>
+        </div>
+        <aside class="panel hero-panel discovery-side-note">
+          <h2>Built for buyers who</h2>
+          <ol class="steps">
+            <li>Do not know where to start</li>
+            <li>Cannot easily play a lot of machines in person</li>
+            <li>Feel uneasy about a $5k-$12k mistake</li>
+            <li>Would rather react to machines than answer jargon-heavy questions</li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Why this flow works</p>
+            <h2>It helps you narrow down taste before you need expert vocabulary.</h2>
+          </div>
+          <a class="text-link" href="help.html">Start discovery</a>
+        </div>
+        <div class="feature-grid">
+          <article class="panel">
+            <h3>Light upfront questions</h3>
+            <p class="muted">We start with practical constraints like budget, play access, and whether you want a safer first buy or a more specific pick.</p>
+          </article>
+          <article class="panel">
+            <h3>Reaction-based learning</h3>
+            <p class="muted">You see a focused set of strong starter machines, preview them visually, and react to what looks fun. That gives better signal than abstract enthusiast questions.</p>
+          </article>
+          <article class="panel">
+            <h3>Confidence-building shortlist</h3>
+            <p class="muted">You finish with three first-machine recommendations, nearby validation ideas, and practical notes about what is easier or harder to find.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="panel confidence-panel">
+          <div>
+            <p class="eyebrow">Support</p>
+            <h2>Designed to reduce first-buy regret.</h2>
+            <p class="muted">Pinball Scout is now centered on helping first-time buyers narrow the field before they fall into endless browsing, overthinking, or title-by-title comparison.</p>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="help.html">Start the flow</a>
+            <a class="btn btn-secondary" href="glossary.html">Pinball terms</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Starter examples</p>
+            <h2>A few machines you’ll likely run into in the discovery flow</h2>
+          </div>
+          <a class="text-link" href="machines.html">Prefer browsing the directory?</a>
+        </div>
+        <div id="starter-preview-grid" class="cards-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>Pinball Scout</p>
+      <div>
+        <a href="help.html">Find Your First Pin</a>
+        <a href="help.html#how-to-choose">How to Choose</a>
+        <a href="machines.html">Machines</a>
+        <a href="glossary.html">Pinball Terms</a>
+        <a href="compare.html">Compare <span id="compare-count" class="count-pill">0</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="lib/home.js"></script>
+</body>
+</html>

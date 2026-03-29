@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse Machines | Pinball Scout</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Pinball Scout</a>
+      <nav>
+        <a href="help.html">Find Your First Pin</a>
+        <a href="help.html#how-to-choose">How to Choose</a>
+        <a href="machines.html" aria-current="page">Machines</a>
+        <a href="compare.html">Compare <span id="compare-count" class="count-pill">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container directory-intro-stack">
+      <div class="panel directory-intro">
+        <div>
+          <p class="eyebrow">Self-directed browsing</p>
+          <h1>Use the directory after you’ve narrowed things down.</h1>
+          <p class="muted">This page is best when you already have a few titles, themes, or makers in mind. If you are still figuring out what kind of machine you actually want, start with the guided flow first.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="help.html">Find Your First Pin</a>
+          <a class="btn btn-secondary" href="compare.html">Open compare</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container page-grid directory-page-grid">
+      <aside class="filters panel">
+        <div class="section-head compact">
+          <h2>Refine the directory</h2>
+          <button id="clear-filters" class="btn btn-secondary small">Clear</button>
+        </div>
+        <p class="muted directory-filter-note">Use filters when you already have some direction. You do not need to use all of them.</p>
+
+        <label>
+          Search
+          <input id="search" type="search" placeholder="Search by machine, maker, theme, or tag" />
+        </label>
+
+        <label>
+          Budget
+          <select id="budget">
+            <option value="">Any</option>
+            <option value="under7000">Under $7k</option>
+            <option value="7000to9000">$7k–$9k</option>
+            <option value="9000to12000">$9k–$12k</option>
+            <option value="over12000">Over $12k</option>
+          </select>
+        </label>
+
+        <label>
+          Theme
+          <select id="theme"><option value="">Any</option></select>
+        </label>
+
+        <label>
+          Manufacturer
+          <select id="manufacturer"><option value="">Any</option></select>
+        </label>
+
+        <label>
+          Availability
+          <select id="condition">
+            <option value="">Any</option>
+            <option value="new">New only</option>
+            <option value="used">Used only</option>
+            <option value="both">New or used</option>
+          </select>
+        </label>
+
+        <label>
+          Era
+          <select id="era"><option value="">Any</option></select>
+        </label>
+
+        <label class="checkbox-row"><input type="checkbox" id="beginner" /> Beginner friendly</label>
+        <label class="checkbox-row"><input type="checkbox" id="family" /> Family friendly</label>
+
+        <label>
+          Rules complexity
+          <select id="complexity">
+            <option value="">Any</option>
+            <option value="1">1+</option>
+            <option value="2">2+</option>
+            <option value="3">3+</option>
+            <option value="4">4+</option>
+          </select>
+        </label>
+
+        <label>
+          Maintenance difficulty
+          <select id="maintenance">
+            <option value="">Any</option>
+            <option value="1">1+</option>
+            <option value="2">2+</option>
+            <option value="3">3+</option>
+            <option value="4">4+</option>
+          </select>
+        </label>
+
+        <label>
+          Sort by
+          <select id="sort">
+            <option value="featured">Featured</option>
+            <option value="lowestCost">Lowest cost</option>
+            <option value="bestValue">Best value</option>
+            <option value="beginner">Beginner friendly</option>
+            <option value="family">Most family friendly</option>
+            <option value="ownership">Easiest ownership</option>
+          </select>
+        </label>
+      </aside>
+
+      <section>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Machine directory</p>
+            <h2>Browse machines on your own</h2>
+            <p class="muted">Already have some titles in mind? Use the directory. If you do not know where to start, go back to <a class="text-link" href="help.html">Find Your First Pin</a> and let Pinball Scout narrow things down first.</p>
+            <div id="active-filters" class="badge-row active-filters"></div>
+          </div>
+          <p id="results-count" class="muted"></p>
+        </div>
+        <div id="machine-results" class="cards-grid"></div>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="lib/machines-page.js"></script>
+</body>
+</html>

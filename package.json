@@ -1,0 +1,10 @@
+{
+  "name": "pinball-scout-vanilla",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "media:import": "node scripts/import-machine-images.mjs",
+    "media:unresolved": "node scripts/unresolved-machine-report.mjs",
+    "pricing:import": "node scripts/import-market-pricing.mjs"
+  }
+}

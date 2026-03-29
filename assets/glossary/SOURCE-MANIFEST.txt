@@ -1,0 +1,6 @@
+flow.png | Flow | https://pinballmakers.com/wiki/images/8/87/Afm-playfield.png
+layout.png | Layout | https://pinballmakers.com/wiki/images/5/57/Playfield-diagram.png
+feeds.jpg | Feeds | https://www.pinballnews.com/games/metallica/114.jpg
+ramps.jpg | Ramps | https://www.pinballnews.com/games/walkingdead/84.jpg
+multiball.jpg | Multiball | https://www.pinballnews.com/games/csi/030.jpg
+bash-toy.jpg | Bash Toy | https://www.pinballnews.com/games/walkingdead/17.jpg
