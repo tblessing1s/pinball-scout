@@ -1,3 +1,5 @@
+import { indexBy } from "../lib/collection-utils.js";
+
 export const machineVideoOverrides = [
   {
     machineSlug: "godzilla-pro",
@@ -61,6 +63,4 @@ export const machineVideoOverrides = [
   }
 ];
 
-export const machineVideoOverrideIndex = new Map(
-  machineVideoOverrides.map((item) => [item.machineSlug, item])
-);
+export const machineVideoOverrideIndex = indexBy(machineVideoOverrides, "machineSlug");

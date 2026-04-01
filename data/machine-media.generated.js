@@ -6,14 +6,14 @@ export const machineMedia = [
     "imageUrls": [
       "assets/machines/godzilla_pro.png"
     ],
-    "imageSource": "PINSIDE",
-    "attributionText": "Pinside seeded match",
-    "sourcePageUrl": "https://pinside.com/pinball/machine?query=Godzilla%20Pro",
+    "imageSource": "LOCAL",
+    "attributionText": "Cached locally from AllStar Arcade product page",
+    "sourcePageUrl": "https://www.allstararcade.com/store/p/godzillapro",
     "sourceMachineId": "godzilla-pro",
-    "sourcePriority": 10,
-    "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.665Z",
-    "notes": "Curated seed record for the MVP media pipeline."
+    "sourcePriority": 0,
+    "status": "overridden",
+    "lastSyncedAt": "2026-03-30T21:39:40.291Z",
+    "notes": "Cached locally to avoid remote image hotlinking."
   },
   {
     "id": "deadpool-pro-media",
@@ -24,11 +24,11 @@ export const machineMedia = [
     ],
     "imageSource": "PINSIDE",
     "attributionText": "Pinside seeded match",
-    "sourcePageUrl": "https://pinside.com/pinball/machine?query=Deadpool%20Pro",
+    "sourcePageUrl": "https://pinside.com/pinball/machine/deadpool-pro",
     "sourceMachineId": "deadpool-pro",
     "sourcePriority": 10,
     "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.666Z",
+    "lastSyncedAt": "2026-03-30T21:39:40.294Z",
     "notes": "Curated seed record for the MVP media pipeline."
   },
   {
@@ -40,11 +40,11 @@ export const machineMedia = [
     ],
     "imageSource": "PINSIDE",
     "attributionText": "Pinside seeded match",
-    "sourcePageUrl": "https://pinside.com/pinball/machine?query=Foo%20Fighters%20Pro",
+    "sourcePageUrl": "https://pinside.com/pinball/machine/foo-fighters-pro",
     "sourceMachineId": "foo-fighters-pro",
     "sourcePriority": 10,
     "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.667Z",
+    "lastSyncedAt": "2026-03-30T21:39:40.295Z",
     "notes": "Curated seed record for the MVP media pipeline."
   },
   {
@@ -56,11 +56,11 @@ export const machineMedia = [
     ],
     "imageSource": "PINSIDE",
     "attributionText": "Pinside seeded match",
-    "sourcePageUrl": "https://pinside.com/pinball/machine?query=Avengers%3A%20Infinity%20Quest%20Pro",
+    "sourcePageUrl": "https://pinside.com/pinball/machine/avengers-infinity-quest-pro",
     "sourceMachineId": "avengers-infinity-quest-pro",
     "sourcePriority": 10,
     "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.669Z",
+    "lastSyncedAt": "2026-03-30T21:39:40.297Z",
     "notes": "Curated seed record for the MVP media pipeline."
   },
   {
@@ -72,11 +72,11 @@ export const machineMedia = [
     ],
     "imageSource": "PINSIDE",
     "attributionText": "Pinside seeded match",
-    "sourcePageUrl": "https://pinside.com/pinball/machine?query=Jurassic%20Park%20Pro",
+    "sourcePageUrl": "https://pinside.com/pinball/machine/jurassic-park-pro",
     "sourceMachineId": "jurassic-park-pro",
     "sourcePriority": 10,
     "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.670Z",
+    "lastSyncedAt": "2026-03-30T21:39:40.298Z",
     "notes": "Curated seed record for the MVP media pipeline."
   },
   {
@@ -88,11 +88,11 @@ export const machineMedia = [
     ],
     "imageSource": "PINSIDE",
     "attributionText": "Pinside seeded match",
-    "sourcePageUrl": "https://pinside.com/pinball/machine?query=Venom%20Pro",
+    "sourcePageUrl": "https://pinside.com/pinball/machine/venom-pro",
     "sourceMachineId": "venom-pro",
     "sourcePriority": 10,
     "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.670Z",
+    "lastSyncedAt": "2026-03-30T21:39:40.299Z",
     "notes": "Curated seed record for the MVP media pipeline."
   },
   {
@@ -104,11 +104,11 @@ export const machineMedia = [
     ],
     "imageSource": "PINSIDE",
     "attributionText": "Pinside seeded match",
-    "sourcePageUrl": "https://pinside.com/pinball/machine?query=The%20Mandalorian%20Pro",
+    "sourcePageUrl": "https://pinside.com/pinball/machine/stern-the-mandalorian-pro",
     "sourceMachineId": "mandalorian-pro",
     "sourcePriority": 10,
     "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.671Z",
+    "lastSyncedAt": "2026-03-30T21:39:40.300Z",
     "notes": "Curated seed record for the MVP media pipeline."
   },
   {
@@ -120,11 +120,11 @@ export const machineMedia = [
     ],
     "imageSource": "PINSIDE",
     "attributionText": "Pinside seeded match",
-    "sourcePageUrl": "https://pinside.com/pinball/machine?query=Iron%20Maiden%20Pro",
+    "sourcePageUrl": "https://pinside.com/pinball/machine/iron-maiden-legacy-of-the-beast-pro",
     "sourceMachineId": "iron-maiden-pro",
     "sourcePriority": 10,
     "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.672Z",
+    "lastSyncedAt": "2026-03-30T21:39:40.300Z",
     "notes": "Curated seed record for the MVP media pipeline."
   },
   {
@@ -136,11 +136,11 @@ export const machineMedia = [
     ],
     "imageSource": "PINSIDE",
     "attributionText": "Pinside seeded match",
-    "sourcePageUrl": "https://pinside.com/pinball/machine?query=Jaws%20Pro",
+    "sourcePageUrl": "https://pinside.com/pinball/machine/jaws-pro",
     "sourceMachineId": "jaws-pro",
     "sourcePriority": 10,
     "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.673Z",
+    "lastSyncedAt": "2026-03-30T21:39:40.301Z",
     "notes": "Curated seed record for the MVP media pipeline."
   },
   {
@@ -152,11 +152,11 @@ export const machineMedia = [
     ],
     "imageSource": "PINSIDE",
     "attributionText": "Pinside seeded match",
-    "sourcePageUrl": "https://pinside.com/pinball/machine?query=Stranger%20Things%20Pro",
+    "sourcePageUrl": "https://pinside.com/pinball/machine/stranger-things-pro",
     "sourceMachineId": "stranger-things-pro",
     "sourcePriority": 10,
     "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.673Z",
+    "lastSyncedAt": "2026-03-30T21:39:40.302Z",
     "notes": "Curated seed record for the MVP media pipeline."
   },
   {
@@ -166,14 +166,14 @@ export const machineMedia = [
     "imageUrls": [
       "assets/machines/attack_from_mars_remake.png"
     ],
-    "imageSource": "PINSIDE",
-    "attributionText": "Pinside seeded match",
-    "sourcePageUrl": "https://pinside.com/pinball/machine?query=Attack%20from%20Mars%20Remake",
+    "imageSource": "CHICAGO_GAMING",
+    "attributionText": "Chicago Gaming Company product image",
+    "sourcePageUrl": "https://www.chicago-gaming.com/coinop/attack-from-mars",
     "sourceMachineId": "attack-from-mars-remake",
-    "sourcePriority": 10,
-    "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.674Z",
-    "notes": "Curated seed record for the MVP media pipeline."
+    "sourcePriority": 0,
+    "status": "overridden",
+    "lastSyncedAt": "2026-03-30T21:39:40.302Z",
+    "notes": "Cached locally from official CGC product page."
   },
   {
     "id": "medieval-madness-remake-media",
@@ -182,14 +182,14 @@ export const machineMedia = [
     "imageUrls": [
       "assets/machines/medieval_madness_remake.png"
     ],
-    "imageSource": "PINSIDE",
-    "attributionText": "Pinside seeded match",
-    "sourcePageUrl": "https://pinside.com/pinball/machine?query=Medieval%20Madness%20Remake",
+    "imageSource": "CHICAGO_GAMING",
+    "attributionText": "Chicago Gaming Company product image",
+    "sourcePageUrl": "https://www.chicago-gaming.com/coinop/medieval-madness",
     "sourceMachineId": "medieval-madness-remake",
-    "sourcePriority": 10,
-    "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.675Z",
-    "notes": "Curated seed record for the MVP media pipeline."
+    "sourcePriority": 0,
+    "status": "overridden",
+    "lastSyncedAt": "2026-03-30T21:39:40.303Z",
+    "notes": "Cached locally from official CGC product page."
   },
   {
     "id": "monster-bash-remake-media",
@@ -198,14 +198,14 @@ export const machineMedia = [
     "imageUrls": [
       "assets/machines/monster_bash_remake.png"
     ],
-    "imageSource": "PINSIDE",
-    "attributionText": "Pinside seeded match",
-    "sourcePageUrl": "https://pinside.com/pinball/machine?query=Monster%20Bash%20Remake",
+    "imageSource": "CHICAGO_GAMING",
+    "attributionText": "Chicago Gaming Company product image",
+    "sourcePageUrl": "https://www.chicago-gaming.com/coinop/monster-bash",
     "sourceMachineId": "monster-bash-remake",
-    "sourcePriority": 10,
-    "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.675Z",
-    "notes": "Curated seed record for the MVP media pipeline."
+    "sourcePriority": 0,
+    "status": "overridden",
+    "lastSyncedAt": "2026-03-30T21:39:40.304Z",
+    "notes": "Cached locally from official CGC product page."
   },
   {
     "id": "theatre-of-magic-media",
@@ -220,7 +220,7 @@ export const machineMedia = [
     "sourceMachineId": "theatre-of-magic",
     "sourcePriority": 20,
     "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.677Z",
+    "lastSyncedAt": "2026-03-30T21:39:40.306Z",
     "notes": "Curated seed record for the MVP media pipeline."
   },
   {
@@ -232,11 +232,11 @@ export const machineMedia = [
     ],
     "imageSource": "PINSIDE",
     "attributionText": "Pinside seeded match",
-    "sourcePageUrl": "https://pinside.com/pinball/machine?query=Monster%20Bash%20Remake",
+    "sourcePageUrl": "https://pinside.com/pinball/machine/monster-bash-remake-special",
     "sourceMachineId": "monster-bash-remake",
     "sourcePriority": 10,
     "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.678Z",
+    "lastSyncedAt": "2026-03-30T21:39:40.307Z",
     "notes": "Curated seed record for the MVP media pipeline."
   },
   {
@@ -252,7 +252,7 @@ export const machineMedia = [
     "sourceMachineId": "arabian-nights",
     "sourcePriority": 20,
     "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.679Z",
+    "lastSyncedAt": "2026-03-30T21:39:40.307Z",
     "notes": "Curated seed record for the MVP media pipeline."
   },
   {
@@ -268,24 +268,24 @@ export const machineMedia = [
     "sourceMachineId": "fish-tales",
     "sourcePriority": 20,
     "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.680Z",
+    "lastSyncedAt": "2026-03-30T21:39:40.308Z",
     "notes": "Curated seed record for the MVP media pipeline."
   },
   {
     "id": "funhouse-media",
     "machineSlug": "funhouse",
-    "primaryImageUrl": "assets/machines/funhouse.png",
+    "primaryImageUrl": "assets/machines/funhouse.jpg",
     "imageUrls": [
-      "assets/machines/funhouse.png"
+      "assets/machines/funhouse.jpg"
     ],
-    "imageSource": "IPDB",
-    "attributionText": "IPDB seeded match",
-    "sourcePageUrl": "https://www.ipdb.org/search.pl?any=FunHouse",
+    "imageSource": "WIKIMEDIA_COMMONS",
+    "attributionText": "Wikimedia Commons (CC0)",
+    "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Funhouse_pinball_remake.jpg",
     "sourceMachineId": "funhouse",
-    "sourcePriority": 20,
-    "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.680Z",
-    "notes": "Curated seed record for the MVP media pipeline."
+    "sourcePriority": 0,
+    "status": "overridden",
+    "lastSyncedAt": "2026-03-30T21:39:40.308Z",
+    "notes": "CC0 image cached locally."
   },
   {
     "id": "godfather-ce-media",
@@ -296,11 +296,11 @@ export const machineMedia = [
     ],
     "imageSource": "PINSIDE",
     "attributionText": "Pinside seeded match",
-    "sourcePageUrl": "https://pinside.com/pinball/machine?query=The%20Godfather%20Collector's%20Edition",
+    "sourcePageUrl": "https://pinside.com/pinball/machine/the-godfather-collectors-edition",
     "sourceMachineId": "godfather-ce",
     "sourcePriority": 10,
     "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.682Z",
+    "lastSyncedAt": "2026-03-30T21:39:40.309Z",
     "notes": "Curated seed record for the MVP media pipeline."
   },
   {
@@ -312,11 +312,11 @@ export const machineMedia = [
     ],
     "imageSource": "PINSIDE",
     "attributionText": "Pinside seeded match",
-    "sourcePageUrl": "https://pinside.com/pinball/machine?query=Elvira's%20House%20of%20Horrors",
+    "sourcePageUrl": "https://pinside.com/pinball/machine/elviras-house-of-horrors-premium",
     "sourceMachineId": "elvira-house-of-horrors",
     "sourcePriority": 10,
     "status": "resolved",
-    "lastSyncedAt": "2026-03-26T18:04:18.683Z",
+    "lastSyncedAt": "2026-03-30T21:39:40.310Z",
     "notes": "Curated seed record for the MVP media pipeline."
   }
 ];

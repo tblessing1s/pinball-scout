@@ -2,16 +2,10 @@ import { machines } from "./machines.js";
 import { machineMediaIndex } from "./machine-media.generated.js";
 import { buildPinsideMachineUrl, buildPinsideMarketUrl, buildPinsidePricingUrl } from "../lib/services/pinside-market.js";
 import { machineVideoOverrideIndex } from "./machine-video-overrides.js";
+import { indexBy } from "../lib/collection-utils.js";
+import { searchLink, youtubeSearchUrl } from "../lib/url-utils.js";
 
-const machineIndex = new Map(machines.map((machine) => [machine.slug, machine]));
-
-function youtubeSearchUrl(query) {
-  return `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
-}
-
-function searchLink(baseUrl, query) {
-  return `${baseUrl}${encodeURIComponent(query)}`;
-}
+const machineIndex = indexBy(machines, "slug");
 
 function buildVideoProfile(machine) {
   const override = machineVideoOverrideIndex.get(machine.slug) || {};
@@ -276,6 +270,9 @@ const baseDiscoveryMachines = curatedConfigs.map((config) => {
   }
 
   const media = machineMediaIndex.get(config.slug) || null;
+  const recommendationSignals = buildRecommendationSignals(base, config);
+  const flowScore = flowScoreFromTags(config.tags);
+  const findabilityScore = findabilityScoreFor(base, config);
 
   return {
     ...base,
@@ -315,20 +312,20 @@ const baseDiscoveryMachines = curatedConfigs.map((config) => {
     gameplayDepth: config.gameplayDepth,
     complexity: base.rules_complexity,
     rules_depth_score: base.rules_complexity,
-    flow_score: flowScoreFromTags(config.tags),
-    chaos_score: Math.round(buildRecommendationSignals(base, config).chaotic_multiball_heavy * 5),
+    flow_score: flowScore,
+    chaos_score: Math.round(recommendationSignals.chaotic_multiball_heavy * 5),
     strategy_score: config.gameplayDepth,
     theme_integration_score: config.themeStrength,
     familyFriendly: config.broadAppeal,
     broadAppeal: config.broadAppeal,
     family_friendliness_score: config.broadAppeal,
     maintenanceComplexity: config.maintenanceComplexity,
-    intensity_score: Math.max(2, Math.round(((flowScoreFromTags(config.tags) / 5) + buildRecommendationSignals(base, config).chaotic_multiball_heavy) * 2.5)),
+    intensity_score: Math.max(2, Math.round(((flowScore / 5) + recommendationSignals.chaotic_multiball_heavy) * 2.5)),
     forgiveness_score: config.beginnerFriendly,
     new_or_used_availability: availabilityLabel(base.condition_availability),
-    findabilityScore: findabilityScoreFor(base, config),
-    rarityLabel: rarityLabelFor(findabilityScoreFor(base, config)),
-    validationDifficulty: validationDifficultyFor(findabilityScoreFor(base, config)),
+    findabilityScore,
+    rarityLabel: rarityLabelFor(findabilityScore),
+    validationDifficulty: validationDifficultyFor(findabilityScore),
     energy_style_tags: config.tags,
     style_tags: config.tags,
     likely_fit_tags: config.tags.slice(0, 4),
@@ -346,8 +343,8 @@ const baseDiscoveryMachines = curatedConfigs.map((config) => {
       pinsidePricing: buildPinsidePricingUrl(base),
       ipdb: searchLink("https://www.ipdb.org/search.pl?any=", base.name)
     },
-    recommendation_signals: buildRecommendationSignals(base, config),
-    recommendation_weights: buildRecommendationSignals(base, config)
+    recommendation_signals: recommendationSignals,
+    recommendation_weights: recommendationSignals
   };
 });
 
@@ -371,4 +368,4 @@ export const discoveryMachines = baseDiscoveryMachines.map((machine) => ({
     .map((candidate) => candidate.id)
 }));
 
-export const discoveryMachineIndex = new Map(discoveryMachines.map((machine) => [machine.id, machine]));
+export const discoveryMachineIndex = indexBy(discoveryMachines, "id");

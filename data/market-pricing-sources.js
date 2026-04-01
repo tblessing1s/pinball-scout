@@ -1,3 +1,5 @@
+import { indexBy } from "../lib/collection-utils.js";
+
 export const marketPricingSources = [
   {
     machineSlug: "godzilla-pro",
@@ -101,6 +103,4 @@ export const marketPricingSources = [
   }
 ];
 
-export const marketPricingSourceIndex = new Map(
-  marketPricingSources.map((item) => [item.machineSlug, item])
-);
+export const marketPricingSourceIndex = indexBy(marketPricingSources, "machineSlug");

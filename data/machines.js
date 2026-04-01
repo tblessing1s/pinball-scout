@@ -1,4 +1,6 @@
 import { buildPinsideMachineUrl, buildPinsideMarketUrl } from "../lib/services/pinside-market.js";
+import { indexBy } from "../lib/collection-utils.js";
+import { searchLink } from "../lib/url-utils.js";
 
 export const machines = [
   {
@@ -463,10 +465,6 @@ export const machines = [
   }
 ];
 
-function searchLink(baseUrl, query) {
-  return `${baseUrl}${encodeURIComponent(query)}`;
-}
-
 export const machineCatalog = machines.map((machine) => ({
   ...machine,
   id: machine.id || machine.slug,
@@ -477,4 +475,4 @@ export const machineCatalog = machines.map((machine) => ({
   ipdbUrl: machine.ipdbUrl || searchLink("https://www.ipdb.org/search.pl?any=", machine.name)
 }));
 
-export const machineCatalogIndex = new Map(machineCatalog.map((machine) => [machine.slug, machine]));
+export const machineCatalogIndex = indexBy(machineCatalog, "slug");
