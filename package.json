@@ -3,8 +3,15 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "test:personas": "playwright test",
+    "test:personas:headed": "playwright test --headed",
+    "test:personas:ui": "playwright test --ui",
+    "test:personas:report": "playwright show-report",
     "media:import": "node scripts/import-machine-images.mjs",
     "media:unresolved": "node scripts/unresolved-machine-report.mjs",
     "pricing:import": "node scripts/import-market-pricing.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.0"
   }
 }

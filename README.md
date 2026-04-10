@@ -42,6 +42,68 @@ Then open:
 http://localhost:8080
 ```
 
+## Persona-based Playwright testing
+
+This repo now includes deterministic persona E2E journeys for pre-user-testing validation.
+
+### What is included
+
+- Playwright config with built-in local static server
+- Persona fixtures for beginner buyer archetypes
+- Reusable flow helpers for discovery, shortlist, compare, sourcing, and resume
+- Scenario outcome JSON logs for each persona run
+
+### Persona tests currently implemented
+
+- Overwhelmed Novice
+- Practical / Low-Regret Buyer
+- Theme-Driven Buyer
+
+### Install test dependencies
+
+```bash
+npm install
+npx playwright install chromium
+```
+
+### Run persona tests
+
+```bash
+npm run test:personas
+```
+
+Headed mode:
+
+```bash
+npm run test:personas:headed
+```
+
+Interactive UI mode:
+
+```bash
+npm run test:personas:ui
+```
+
+Open the HTML report:
+
+```bash
+npm run test:personas:report
+```
+
+### Outcome logs
+
+After runs, persona outcome JSON files are written to:
+
+`test-results/persona-outcomes/`
+
+Each file includes:
+
+- persona name/id
+- path taken
+- end location
+- shortlist/compare/front-runner/plan/brief/re-entry flags
+- confusion flags and dead-end states
+
 ## Files
 
 - `data/machines.js` - seeded machine records
