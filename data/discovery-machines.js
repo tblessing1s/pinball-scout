@@ -4,8 +4,31 @@ import { buildPinsideMachineUrl, buildPinsideMarketUrl, buildPinsidePricingUrl }
 import { machineVideoOverrideIndex } from "./machine-video-overrides.js";
 import { indexBy } from "../lib/collection-utils.js";
 import { searchLink, youtubeSearchUrl } from "../lib/url-utils.js";
+import { TRAIT_KEYS } from "./refinement-model.js";
 
 const machineIndex = indexBy(machines, "slug");
+
+const manualTraitOverrides = {
+  "godzilla-pro": { wow_factor: 5, rules_depth: 5, theme_integration: 5 },
+  "deadpool-pro": { beginner_friendly: 5, shot_satisfaction: 4, replayability: 4 },
+  "jurassic-park-pro": { rules_depth: 5, beginner_friendly: 3, shot_satisfaction: 5 },
+  "foo-fighters-pro": { pace: 4, shot_satisfaction: 4, beginner_friendly: 4 },
+  "iron-maiden-pro": { pace: 5, shot_satisfaction: 5, beginner_friendly: 3 },
+  "avengers-infinity-quest-pro": { rules_depth: 5, beginner_friendly: 3, replayability: 5 },
+  "attack-from-mars-remake": { beginner_friendly: 5, rules_depth: 2, replayability: 4 },
+  "medieval-madness-remake": { beginner_friendly: 5, theme_integration: 5, replayability: 4 },
+  "fish-tales": { beginner_friendly: 4, rules_depth: 1, replayability: 3 },
+  "funhouse": { theme_integration: 4, beginner_friendly: 4, replayability: 3 }
+};
+
+const manualProxyOverrides = {
+  "godzilla-pro": ["foo-fighters-pro", "jurassic-park-pro"],
+  "jurassic-park-pro": ["godzilla-pro", "avengers-infinity-quest-pro"],
+  "deadpool-pro": ["foo-fighters-pro", "attack-from-mars-remake"],
+  "iron-maiden-pro": ["foo-fighters-pro", "jurassic-park-pro"],
+  "attack-from-mars-remake": ["medieval-madness-remake", "deadpool-pro"],
+  "medieval-madness-remake": ["attack-from-mars-remake", "deadpool-pro"]
+};
 
 function buildVideoProfile(machine) {
   const override = machineVideoOverrideIndex.get(machine.slug) || {};
@@ -67,6 +90,56 @@ function flowScoreFromTags(tags) {
   if (tags.includes("flow") || tags.includes("fast")) return 5;
   if (tags.includes("shot-driven")) return 4;
   return 3;
+}
+
+function clampScore(value, min = 1, max = 5) {
+  if (!Number.isFinite(value)) return min;
+  return Math.max(min, Math.min(max, Math.round(value)));
+}
+
+function buildTraitProfile(base, config, recommendationSignals, flowScore) {
+  const pace = clampScore(flowScore);
+  const shotSatisfaction = clampScore(
+    config.tags.includes("shot-driven") ? 5 : config.tags.includes("flow") ? 4 : 3
+  );
+  const rulesDepth = clampScore(base.rules_complexity || config.gameplayDepth);
+  const themeIntegration = clampScore(config.themeStrength);
+  const chaosLevel = clampScore(recommendationSignals.chaotic_multiball_heavy * 5);
+  const beginnerFriendly = clampScore(config.beginnerFriendly);
+  const replayability = clampScore((config.gameplayDepth + flowScore) / 2);
+  const wowFactor = clampScore(
+    config.tags.includes("spectacle") || config.tags.includes("showpiece")
+      ? 5
+      : (config.themeStrength + config.gameplayDepth) / 2
+  );
+
+  const baseProfile = {
+    pace,
+    shot_satisfaction: shotSatisfaction,
+    rules_depth: rulesDepth,
+    theme_integration: themeIntegration,
+    chaos_level: chaosLevel,
+    beginner_friendly: beginnerFriendly,
+    replayability,
+    wow_factor: wowFactor
+  };
+
+  if (config.traitBoosts && typeof config.traitBoosts === "object") {
+    Object.entries(config.traitBoosts).forEach(([key, value]) => {
+      if (!(key in baseProfile)) return;
+      baseProfile[key] = clampScore(baseProfile[key] + Number(value || 0));
+    });
+  }
+
+  const manualOverrides = manualTraitOverrides[config.slug] || null;
+  if (manualOverrides) {
+    Object.entries(manualOverrides).forEach(([key, value]) => {
+      if (!(key in baseProfile)) return;
+      baseProfile[key] = clampScore(value);
+    });
+  }
+
+  return baseProfile;
 }
 
 function machineTypeLabel(base) {
@@ -273,6 +346,7 @@ const baseDiscoveryMachines = curatedConfigs.map((config) => {
   const recommendationSignals = buildRecommendationSignals(base, config);
   const flowScore = flowScoreFromTags(config.tags);
   const findabilityScore = findabilityScoreFor(base, config);
+  const traitProfile = buildTraitProfile(base, config, recommendationSignals, flowScore);
 
   return {
     ...base,
@@ -326,6 +400,7 @@ const baseDiscoveryMachines = curatedConfigs.map((config) => {
     findabilityScore,
     rarityLabel: rarityLabelFor(findabilityScore),
     validationDifficulty: validationDifficultyFor(findabilityScore),
+    trait_profile: traitProfile,
     energy_style_tags: config.tags,
     style_tags: config.tags,
     likely_fit_tags: config.tags.slice(0, 4),
@@ -352,20 +427,28 @@ function proxySimilarity(machine, candidate) {
   if (machine.id === candidate.id) return -1;
 
   const sharedTags = machine.style_tags.filter((tag) => candidate.style_tags.includes(tag)).length;
-  const flowGap = 5 - Math.abs(machine.flow_score - candidate.flow_score);
-  const depthGap = 5 - Math.abs(machine.rules_depth_score - candidate.rules_depth_score);
-  const themeGap = 5 - Math.abs(machine.theme_integration_score - candidate.theme_integration_score);
+  const traitSimilarity = TRAIT_KEYS.reduce((acc, key) => {
+    const aValue = machine.trait_profile?.[key];
+    const bValue = candidate.trait_profile?.[key];
+    if (!Number.isFinite(aValue) || !Number.isFinite(bValue)) return acc;
+    return acc + (5 - Math.abs(aValue - bValue));
+  }, 0);
 
-  return sharedTags * 2 + flowGap + depthGap + themeGap;
+  return sharedTags * 1.6 + traitSimilarity;
 }
 
 export const discoveryMachines = baseDiscoveryMachines.map((machine) => ({
   ...machine,
-  proxy_machine_ids: baseDiscoveryMachines
+  proxy_machine_ids: [
+    ...((manualProxyOverrides[machine.slug] || []).filter(Boolean)),
+    ...baseDiscoveryMachines
     .filter((candidate) => candidate.id !== machine.id)
     .sort((a, b) => proxySimilarity(machine, b) - proxySimilarity(machine, a))
-    .slice(0, 3)
+    .slice(0, 6)
     .map((candidate) => candidate.id)
+  ]
+    .filter((id, index, list) => list.indexOf(id) === index && id !== machine.id)
+    .slice(0, 3)
 }));
 
 export const discoveryMachineIndex = indexBy(discoveryMachines, "id");
