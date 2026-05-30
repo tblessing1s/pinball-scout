@@ -491,6 +491,16 @@ select, input, textarea {
 .reaction-prompt {
   width: 100%;
 }
+.reaction-signals {
+  margin-top: .5rem;
+}
+.reaction-signals summary {
+  cursor: pointer;
+  font-size: .875rem;
+  padding: .5rem 0;
+  list-style: none;
+  user-select: none;
+}
 .result-header {
   display: grid;
   gap: .5rem;
@@ -1226,7 +1236,16 @@ th { background: #101d30; color: #c2d3ed; }
     grid-template-columns: 1fr;
   }
   .discovery-machine-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: 96px 1fr;
+    gap: .85rem;
+  }
+  .discovery-machine-image {
+    min-height: 96px;
+  }
+  .discovery-machine-image .machine-image,
+  .discovery-machine-image .card-image {
+    min-height: 96px !important;
+    height: 96px !important;
   }
   .glossary-popover {
     position: fixed;
