@@ -452,7 +452,7 @@ select, input, textarea {
   align-items: center;
 }
 .taste-card .choice-card {
-  min-height: 120px;
+  min-height: 56px;
 }
 .mini-chip-row {
   display: flex;
@@ -493,6 +493,9 @@ select, input, textarea {
 }
 .reaction-signals {
   margin-top: .5rem;
+}
+.budget-grid {
+  grid-template-columns: 1fr 1fr;
 }
 .reaction-signals summary {
   cursor: pointer;
@@ -1255,10 +1258,14 @@ th { background: #101d30; color: #c2d3ed; }
     bottom: 1rem;
     width: auto;
   }
-  .choice-grid,
+  .choice-grid:not(.budget-grid):not(.taste-grid),
   .played-grid,
   .discovery-results-grid {
     grid-template-columns: 1fr;
+  }
+  .budget-grid,
+  .taste-grid {
+    grid-template-columns: 1fr 1fr;
   }
   .discovery-actions,
   .reaction-actions {
