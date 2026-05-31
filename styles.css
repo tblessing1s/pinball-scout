@@ -1916,3 +1916,92 @@ th { background: #101d30; color: #c2d3ed; }
     grid-template-columns: 44px 1fr auto;
   }
 }
+
+/* ── Re-evaluation signal banner ─────────────────────────────────── */
+.reval-signal {
+  display: grid;
+  gap: .6rem;
+}
+.reval-signal h3 { margin: 0; }
+.reval-signal--major {
+  border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 6%, var(--surface));
+}
+.reval-signal--minor {
+  border-left: 3px solid #f59e0b;
+  background: color-mix(in srgb, #f59e0b 6%, var(--surface));
+}
+
+/* ── Budget context note (in sourcing/buying plan) ───────────────── */
+.budget-context-note {
+  font-size: .82rem;
+  font-weight: 500;
+  padding: .3rem .6rem;
+  border-radius: 5px;
+  display: inline-block;
+  margin: .1rem 0 .35rem;
+}
+.budget-context-note--match {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+}
+.budget-context-note--over {
+  background: color-mix(in srgb, #f59e0b 12%, transparent);
+  color: #f59e0b;
+}
+.budget-context-note--under {
+  background: color-mix(in srgb, #6b7280 12%, transparent);
+  color: #9ca3af;
+}
+
+/* ── Bracket nearby ZIP form ─────────────────────────────────────── */
+.bracket-nearby-zip {
+  display: grid;
+  gap: .85rem;
+}
+.bracket-nearby-zip h3 { margin: 0; }
+.bracket-zip-form {
+  display: grid;
+  gap: .75rem;
+}
+.bracket-zip-row {
+  display: flex;
+  gap: .6rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.bracket-zip-label {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  font-size: .82rem;
+  font-weight: 500;
+}
+.bracket-zip-label input,
+.bracket-zip-label select {
+  padding: .5rem .65rem;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--surface-alt, #1a1a2e);
+  color: inherit;
+  font-size: .9rem;
+  min-width: 0;
+}
+.bracket-zip-label input { width: 110px; }
+.btn-inline-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: inherit;
+  text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+  .bracket-zip-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .bracket-zip-label input { width: 100%; }
+}
