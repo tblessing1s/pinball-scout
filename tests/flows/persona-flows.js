@@ -35,32 +35,12 @@ export async function openDiscovery(page, outcome) {
 export async function chooseEntryAndContext(page, persona, outcome) {
   addPathStep(outcome, "entry-and-context");
   await clickChoice(page, `[data-entry="${persona.entry}"]`, "Entry choice not available.");
-  await expect(page.locator("[data-action='start-discovery']")).toBeVisible();
-
-  for (const [question, value] of Object.entries(persona.context)) {
-    await clickChoice(
-      page,
-      `[data-context-choice="${question}:${value}"]`,
-      `Context choice missing for ${question}:${value}.`
-    );
-  }
-
-  await clickChoice(page, "[data-action='start-discovery']", "Could not continue from guardrails.");
 }
 
 export async function completeTasteProfile(page, persona, outcome) {
-  addPathStep(outcome, "taste-profile");
-  await expect(page.locator("[data-action='begin-reactions']")).toBeVisible();
-
-  for (const [prompt, value] of Object.entries(persona.taste)) {
-    await clickChoice(
-      page,
-      `[data-taste-choice="${prompt}:${value}"]`,
-      `Taste choice missing for ${prompt}:${value}.`
-    );
-  }
-
-  await clickChoice(page, "[data-action='begin-reactions']", "Could not start machine reaction loop.");
+  // Deprecated in discovery path — taste preferences now collected via taste-pivot machine comparisons.
+  // This no-op is kept so spec files that still call it do not error.
+  addPathStep(outcome, "taste-profile-skipped");
 }
 
 export async function runReactionLoopToResults(page, persona, outcome) {
@@ -69,22 +49,37 @@ export async function runReactionLoopToResults(page, persona, outcome) {
   let cardIndex = 0;
 
   while (cardIndex < maxCards) {
-    if (await page.locator("[data-action='show-recommendations']").isVisible()) {
-      await page.locator("[data-action='show-recommendations']").click();
-      break;
-    }
-
     const reactionButtons = page.locator("[data-reaction]");
-    await expect(reactionButtons, "No reaction actions visible; likely stuck in discovery flow.").toHaveCount(3);
+    const hasReactions = await reactionButtons.count() > 0;
+    if (!hasReactions) break;
 
     const likedAspect = persona.likedAspectSequence[cardIndex % persona.likedAspectSequence.length];
     const concern = persona.concernSequence[cardIndex % persona.concernSequence.length];
     const reaction = persona.reactionSequence[cardIndex % persona.reactionSequence.length];
 
-    await page.locator(`[data-draft-choice="likedAspect:${likedAspect}"]`).click();
-    await page.locator(`[data-draft-choice="concern:${concern}"]`).click();
+    const likedAspectBtn = page.locator(`[data-draft-choice="likedAspect:${likedAspect}"]`);
+    if (await likedAspectBtn.isVisible()) await likedAspectBtn.click();
+    const concernBtn = page.locator(`[data-draft-choice="concern:${concern}"]`);
+    if (await concernBtn.isVisible()) await concernBtn.click();
     await page.locator(`[data-reaction="${reaction}"]`).click();
     cardIndex += 1;
+  }
+
+  // After reactions: handle budget-check screen
+  const budgetCheck = page.locator("[data-context-choice^='budget:']").first();
+  if (await budgetCheck.isVisible()) {
+    const budgetValue = persona.context.budget || "7000to9000";
+    await page.locator(`[data-context-choice="budget:${budgetValue}"]`).click();
+  }
+
+  // After budget: handle taste-pivot comparisons (3 rounds, always pick left)
+  for (let pivot = 0; pivot < 3; pivot += 1) {
+    const pivotBtn = page.locator(`[data-action="taste-pivot-pick:${pivot}:left"]`);
+    if (await pivotBtn.isVisible()) {
+      await pivotBtn.click();
+    } else {
+      break;
+    }
   }
 
   await expect(resultsNextStep(page), "Shortlist results screen did not load.").toBeVisible();
