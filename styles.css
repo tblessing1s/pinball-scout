@@ -736,6 +736,14 @@ select, input, textarea {
   color: var(--muted);
   margin: 0;
 }
+.narrow-card .narrow-reason {
+  font-size: .875rem;
+  margin: .4rem 0 .3rem;
+}
+.narrow-price {
+  font-size: .8rem;
+  margin: 0 0 .5rem;
+}
 .archetype-banner-inner {
   display: grid;
   gap: .5rem;
