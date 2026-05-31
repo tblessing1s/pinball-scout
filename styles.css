@@ -662,6 +662,80 @@ select, input, textarea {
   gap: .85rem;
   border-left: 3px solid var(--accent);
 }
+.played-badge {
+  display: inline-block;
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  color: var(--accent);
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: .2rem .5rem;
+  border-radius: 4px;
+  margin-bottom: .5rem;
+}
+.profile-recs {
+  display: grid;
+  gap: .75rem;
+}
+.profile-rec-card {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: .75rem;
+  align-items: start;
+}
+.profile-rec-card .machine-image-frame--thumb {
+  height: 72px;
+}
+.profile-rec-body strong {
+  display: block;
+  margin-bottom: .2rem;
+}
+.profile-rec-body p {
+  font-size: .85rem;
+  color: var(--muted);
+  margin: 0;
+}
+.profile-actions-panel {
+  display: grid;
+  gap: 1rem;
+}
+.profile-action-list {
+  display: grid;
+  gap: .5rem;
+}
+.profile-action-btn {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: .75rem;
+  align-items: start;
+  background: var(--surface-alt, #1a1a2e);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .85rem 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+  width: 100%;
+}
+.profile-action-btn:hover {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface-alt, #1a1a2e));
+}
+.profile-action-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  padding-top: .1rem;
+}
+.profile-action-btn strong {
+  display: block;
+  margin-bottom: .2rem;
+}
+.profile-action-btn p {
+  font-size: .82rem;
+  color: var(--muted);
+  margin: 0;
+}
 .archetype-banner-inner {
   display: grid;
   gap: .5rem;

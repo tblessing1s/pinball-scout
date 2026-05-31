@@ -65,21 +65,20 @@ export async function runReactionLoopToResults(page, persona, outcome) {
     cardIndex += 1;
   }
 
-  // After reactions: handle budget-check screen
-  const budgetCheck = page.locator("[data-context-choice^='budget:']").first();
-  if (await budgetCheck.isVisible()) {
-    const budgetValue = persona.context.budget || "7000to9000";
-    await page.locator(`[data-context-choice="budget:${budgetValue}"]`).click();
-  }
-
-  // After budget: handle taste-pivot comparisons (4 rounds, always pick left)
-  for (let pivot = 0; pivot < 4; pivot += 1) {
+  // Taste-pivot comparisons (6 rounds, always pick left)
+  for (let pivot = 0; pivot < 6; pivot += 1) {
     const pivotBtn = page.locator(`[data-action="taste-pivot-pick:${pivot}:left"]`);
     if (await pivotBtn.isVisible()) {
       await pivotBtn.click();
     } else {
       break;
     }
+  }
+
+  // After taste-reveal profile screen, advance to recommendations
+  const showRecsBtn = page.locator("[data-action='show-recommendations']");
+  if (await showRecsBtn.isVisible()) {
+    await showRecsBtn.click();
   }
 
   await expect(resultsNextStep(page), "Shortlist results screen did not load.").toBeVisible();
