@@ -72,8 +72,8 @@ export async function runReactionLoopToResults(page, persona, outcome) {
     await page.locator(`[data-context-choice="budget:${budgetValue}"]`).click();
   }
 
-  // After budget: handle taste-pivot comparisons (3 rounds, always pick left)
-  for (let pivot = 0; pivot < 3; pivot += 1) {
+  // After budget: handle taste-pivot comparisons (4 rounds, always pick left)
+  for (let pivot = 0; pivot < 4; pivot += 1) {
     const pivotBtn = page.locator(`[data-action="taste-pivot-pick:${pivot}:left"]`);
     if (await pivotBtn.isVisible()) {
       await pivotBtn.click();
