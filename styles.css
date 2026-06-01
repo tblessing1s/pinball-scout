@@ -566,27 +566,21 @@ select:focus, input:focus, textarea:focus {
   transition: border-color .15s, box-shadow .15s;
 }
 .taste-pivot-card:hover {
-  border-color: var(--border-2);
+  border-color: rgba(27, 202, 211, 0.4);
   box-shadow: 0 8px 28px rgba(0,0,0,0.55), 0 0 0 1px rgba(27,202,211,0.1);
 }
-.taste-pivot-card.is-expanded {
-  border-color: rgba(27, 202, 211, 0.45);
-  box-shadow: 0 8px 28px rgba(0,0,0,0.55), 0 0 0 1px rgba(27,202,211,0.15);
-  cursor: default;
-}
-/* Details + pick button hidden until card is expanded */
-.taste-pivot-details { display: none; }
-.taste-pivot-pick-btn { display: none; }
-.taste-pivot-card.is-expanded .taste-pivot-details { display: flex; flex-direction: column; }
-.taste-pivot-card.is-expanded .taste-pivot-pick-btn { display: flex; }
-/* Hint text — shown when collapsed, hidden when expanded */
+/* "Tap to see why" hint */
 .taste-pivot-hint {
   font-size: .75rem;
   color: var(--accent);
   margin: 0;
   opacity: .8;
 }
-.taste-pivot-card.is-expanded .taste-pivot-hint { display: none; }
+/* Details list — shown inside the bottom sheet only */
+.taste-pivot-details--sheet {
+  display: flex;
+  flex-direction: column;
+}
 .taste-pivot-card .machine-image-frame--thumb { min-height: 160px; }
 .taste-pivot-card .machine-image-frame--thumb .machine-image,
 .taste-pivot-card .machine-image-frame--thumb .card-image {
