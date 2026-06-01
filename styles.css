@@ -560,34 +560,33 @@ select:focus, input:focus, textarea:focus {
 .taste-pivot-card {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 1.25rem;
+  gap: .75rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: border-color .15s, box-shadow .15s;
+}
+.taste-pivot-card:hover {
+  border-color: var(--border-2);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.55), 0 0 0 1px rgba(27,202,211,0.1);
+}
+.taste-pivot-card.is-expanded {
+  border-color: rgba(27, 202, 211, 0.45);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.55), 0 0 0 1px rgba(27,202,211,0.15);
   cursor: default;
 }
-/* "Why this?" button — hidden on desktop, shown on mobile */
-.taste-pivot-why-btn {
-  display: none;
-  background: none;
-  border: 1px solid var(--border-2);
-  border-radius: var(--r-sm);
+/* Details + pick button hidden until card is expanded */
+.taste-pivot-details { display: none; }
+.taste-pivot-pick-btn { display: none; }
+.taste-pivot-card.is-expanded .taste-pivot-details { display: flex; flex-direction: column; }
+.taste-pivot-card.is-expanded .taste-pivot-pick-btn { display: flex; }
+/* Hint text — shown when collapsed, hidden when expanded */
+.taste-pivot-hint {
+  font-size: .75rem;
   color: var(--accent);
-  font: inherit;
-  font-size: .78rem;
-  font-weight: 600;
-  padding: .35rem .6rem;
-  cursor: pointer;
-  text-align: left;
-  margin-top: .15rem;
-  transition: border-color .15s, background .15s;
+  margin: 0;
+  opacity: .8;
 }
-.taste-pivot-why-btn:hover { border-color: var(--accent); background: var(--accent-2); }
-/* Sheet shown in modal — details always visible inside it */
-.pivot-details-sheet { max-width: min(480px, 100%); }
-.pivot-sheet-title { margin: .25rem 0 .85rem; }
-.taste-pivot-details--open {
-  display: flex !important;
-  flex-direction: column;
-}
+.taste-pivot-card.is-expanded .taste-pivot-hint { display: none; }
 .taste-pivot-card .machine-image-frame--thumb { min-height: 160px; }
 .taste-pivot-card .machine-image-frame--thumb .machine-image,
 .taste-pivot-card .machine-image-frame--thumb .card-image {
@@ -1423,15 +1422,13 @@ th { background: var(--surface-2); color: #c0d0e8; font-weight: 600; }
   .taste-grid { grid-template-columns: 1fr 1fr; }
   .taste-pivot-or { padding: .25rem 0; }
   .taste-pivot-or span { padding: .25rem .45rem; font-size: .68rem; }
-  .taste-pivot-card { padding: .75rem; gap: .65rem; }
+  .taste-pivot-card { padding: .75rem; gap: .6rem; }
   .taste-pivot-card .machine-image-frame--thumb { min-height: 120px; }
   .taste-pivot-card .machine-image-frame--thumb .machine-image,
   .taste-pivot-card .machine-image-frame--thumb .card-image { height: 120px; min-height: 120px; }
-  .taste-pivot-body { gap: .4rem; }
+  .taste-pivot-body { gap: .35rem; }
   .taste-pivot-body h3 { font-size: .88rem; }
-  /* Hide detail bullets on mobile — surfaced via the Why sheet instead */
-  .taste-pivot-details:not(.taste-pivot-details--open) { display: none; }
-  .taste-pivot-why-btn { display: block; }
+  .taste-pivot-details li { font-size: .82rem; }
   .discovery-actions,
   .reaction-actions { flex-direction: column; align-items: stretch; }
   .reaction-btn { width: 100%; }
