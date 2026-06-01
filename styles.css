@@ -564,6 +564,30 @@ select:focus, input:focus, textarea:focus {
   padding: 1.25rem;
   cursor: default;
 }
+/* "Why this?" button — hidden on desktop, shown on mobile */
+.taste-pivot-why-btn {
+  display: none;
+  background: none;
+  border: 1px solid var(--border-2);
+  border-radius: var(--r-sm);
+  color: var(--accent);
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 600;
+  padding: .35rem .6rem;
+  cursor: pointer;
+  text-align: left;
+  margin-top: .15rem;
+  transition: border-color .15s, background .15s;
+}
+.taste-pivot-why-btn:hover { border-color: var(--accent); background: var(--accent-2); }
+/* Sheet shown in modal — details always visible inside it */
+.pivot-details-sheet { max-width: min(480px, 100%); }
+.pivot-sheet-title { margin: .25rem 0 .85rem; }
+.taste-pivot-details--open {
+  display: flex !important;
+  flex-direction: column;
+}
 .taste-pivot-card .machine-image-frame--thumb { min-height: 160px; }
 .taste-pivot-card .machine-image-frame--thumb .machine-image,
 .taste-pivot-card .machine-image-frame--thumb .card-image {
@@ -1398,14 +1422,16 @@ th { background: var(--surface-2); color: #c0d0e8; font-weight: 600; }
   .budget-grid,
   .taste-grid { grid-template-columns: 1fr 1fr; }
   .taste-pivot-or { padding: .25rem 0; }
-  .taste-pivot-card { padding: .75rem; gap: .6rem; }
-  .taste-pivot-card .machine-image-frame--thumb { min-height: 110px; }
-  .taste-pivot-card .machine-image-frame--thumb .machine-image,
-  .taste-pivot-card .machine-image-frame--thumb .card-image { height: 110px; min-height: 110px; }
-  .taste-pivot-body { gap: .35rem; }
-  .taste-pivot-body h3 { font-size: .9rem; }
-  .taste-pivot-details li { font-size: .78rem; }
   .taste-pivot-or span { padding: .25rem .45rem; font-size: .68rem; }
+  .taste-pivot-card { padding: .75rem; gap: .65rem; }
+  .taste-pivot-card .machine-image-frame--thumb { min-height: 120px; }
+  .taste-pivot-card .machine-image-frame--thumb .machine-image,
+  .taste-pivot-card .machine-image-frame--thumb .card-image { height: 120px; min-height: 120px; }
+  .taste-pivot-body { gap: .4rem; }
+  .taste-pivot-body h3 { font-size: .88rem; }
+  /* Hide detail bullets on mobile — surfaced via the Why sheet instead */
+  .taste-pivot-details:not(.taste-pivot-details--open) { display: none; }
+  .taste-pivot-why-btn { display: block; }
   .discovery-actions,
   .reaction-actions { flex-direction: column; align-items: stretch; }
   .reaction-btn { width: 100%; }
