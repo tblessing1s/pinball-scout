@@ -1,0 +1,31 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/machine/*"
+  to = "/machine.html"
+  status = 200
+
+# HTML — never cache; always fetch fresh so deploys propagate immediately
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# JS/CSS — revalidate on every request using ETags (304 Not Modified if unchanged,
+# instant update if the file changed). No manual cache clearing needed after deploys.
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Static assets (images, fonts) — long cache is fine; these rarely change
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
