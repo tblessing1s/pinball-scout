@@ -357,7 +357,8 @@ select, input, textarea {
   background: #16253b;
   overflow: hidden;
 }
-.progress-bar span {
+.progress-bar span,
+.progress-bar-fill {
   display: block;
   height: 100%;
   border-radius: inherit;
