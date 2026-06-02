@@ -1541,6 +1541,28 @@ th { background: var(--surface-2); color: #c0d0e8; font-weight: 600; }
 .bracket-next-step { display: grid; gap: .75rem; }
 .bracket-next-step h3 { margin: 0; }
 
+/* Bracket test groups (nearby-test screen, bracket path) */
+.bracket-test-groups { display: grid; gap: .75rem; }
+.bracket-test-group { display: grid; gap: .9rem; }
+.bracket-test-group__header { display: flex; gap: .75rem; align-items: flex-start; }
+.bracket-test-group__medal { font-size: 1.6rem; line-height: 1; flex-shrink: 0; margin-top: .15rem; }
+.bracket-test-group__header h3 { margin: 0 0 .2rem; }
+.bracket-test-group__header .eyebrow { margin-bottom: .2rem; }
+.bracket-test-group__header .muted { font-size: .82rem; margin: 0; }
+
+.bracket-probe-list { display: grid; gap: .5rem; }
+.bracket-probe-row { display: flex; align-items: center; gap: .75rem; padding: .6rem .75rem; background: var(--surface-raised, rgba(255,255,255,.04)); border-radius: 8px; border: 1px solid var(--border); }
+.bracket-probe-row.is-played { opacity: .65; }
+.bracket-probe-thumb { width: 52px; height: 52px; flex-shrink: 0; border-radius: 6px; overflow: hidden; }
+.bracket-probe-thumb .card-image { height: 100%; }
+.bracket-probe-body { flex: 1; min-width: 0; display: grid; gap: .15rem; }
+.bracket-probe-header { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+.bracket-probe-header strong { font-size: .9rem; }
+.bracket-probe-body .muted { font-size: .78rem; margin: 0; }
+.bracket-probe-hint { font-size: .78rem; color: var(--accent, #1bcad3); margin: 0; font-style: italic; }
+.bracket-probe-action { flex-shrink: 0; }
+.bracket-probe-empty { font-size: .85rem; padding: .5rem 0; }
+
 /* ── Owned badge ───────────────────────────────────────────────────── */
 .owned-badge {
   display: inline-block;
