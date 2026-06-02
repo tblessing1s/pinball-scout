@@ -5,7 +5,7 @@ import { machineVideoOverrideIndex } from "./machine-video-overrides.js";
 import { indexBy } from "../lib/collection-utils.js";
 import { searchLink, youtubeSearchUrl } from "../lib/url-utils.js";
 import { TRAIT_KEYS } from "./refinement-model.js";
-import { findRelatedMachines } from "./machine-components.js";
+import { findRelatedMachines, inferComponentsFromMeta, MACHINE_COMPONENTS } from "./machine-components.js";
 
 const machineIndex = indexBy(machines, "slug");
 
@@ -704,6 +704,15 @@ const curatedConfigs = [
     cautionNote: "Rules are shallow by modern standards and most examples carry heavy location mileage."
   }
 ];
+
+// Auto-fill any machine that doesn't have a hand-curated component entry yet.
+// inferComponentsFromMeta gives ~75% accuracy from tags + numeric fields alone.
+// Replace with a manual MACHINE_COMPONENTS entry for any machine that needs precision.
+curatedConfigs.forEach((config) => {
+  if (!MACHINE_COMPONENTS[config.slug]) {
+    MACHINE_COMPONENTS[config.slug] = inferComponentsFromMeta(config);
+  }
+});
 
 const baseDiscoveryMachines = curatedConfigs.map((config) => {
   const base = machineIndex.get(config.slug);
