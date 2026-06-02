@@ -16,7 +16,11 @@ export default defineConfig({
     baseURL: "http://127.0.0.1:4173",
     trace: "retain-on-failure",
     screenshot: "only-on-failure",
-    video: "retain-on-failure"
+    video: "retain-on-failure",
+    launchOptions: {
+      executablePath: "/opt/pw-browsers/chromium-1194/chrome-linux/chrome",
+      args: ["--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu"]
+    }
   },
   webServer: {
     command: "node tests/helpers/static-server.mjs 4173",

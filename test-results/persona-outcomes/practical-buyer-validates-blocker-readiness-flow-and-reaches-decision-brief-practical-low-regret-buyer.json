@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "startedAt": "2026-04-11T12:25:09.257Z",
-  "finishedAt": "2026-04-11T12:25:16.731Z",
+  "startedAt": "2026-06-02T22:24:29.971Z",
+  "finishedAt": "2026-06-02T22:24:36.286Z",
   "testTitle": "Practical Buyer validates blocker/readiness flow and reaches decision brief",
   "personaName": "The Practical / Low-Regret Buyer",
   "personaId": "practical-low-regret-buyer",
@@ -33,32 +33,32 @@
     {
       "type": "step",
       "step": "open-discovery",
-      "at": "2026-04-11T12:25:09.257Z"
+      "at": "2026-06-02T22:24:29.971Z"
     },
     {
       "type": "step",
       "step": "entry-and-context",
-      "at": "2026-04-11T12:25:09.334Z"
+      "at": "2026-06-02T22:24:30.351Z"
     },
     {
       "type": "step",
       "step": "taste-profile",
-      "at": "2026-04-11T12:25:10.072Z"
+      "at": "2026-06-02T22:24:30.781Z"
     },
     {
       "type": "step",
       "step": "reaction-loop",
-      "at": "2026-04-11T12:25:11.190Z"
+      "at": "2026-06-02T22:24:32.066Z"
     },
     {
       "type": "step",
       "step": "open-buying-plan",
-      "at": "2026-04-11T12:25:12.727Z"
+      "at": "2026-06-02T22:24:32.774Z"
     },
     {
       "type": "step",
       "step": "complete-buying-plan",
-      "at": "2026-04-11T12:25:12.808Z"
+      "at": "2026-06-02T22:24:32.869Z"
     }
   ],
   "flowEnded": "http://127.0.0.1:4173/help.html",
@@ -139,13 +139,21 @@
   },
   "checkpoints": [
     {
-      "at": "2026-04-11T12:25:09.334Z",
+      "at": "2026-06-02T22:24:30.351Z",
       "label": "entry-screen",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
       "heading": "Not sure where to start? We’ll help you narrow down your first pin.",
       "readinessSummary": "",
-      "visiblePrimaryButtons": [],
+      "visiblePrimaryButtons": [
+        {
+          "text": "Start here →",
+          "action": "",
+          "href": "",
+          "disabled": false,
+          "isSmall": false
+        }
+      ],
       "decisionState": {
         "frontRunnerSlug": "",
         "backupSlugs": [],
@@ -165,7 +173,7 @@
       }
     },
     {
-      "at": "2026-04-11T12:25:12.713Z",
+      "at": "2026-06-02T22:24:32.746Z",
       "label": "shortlist-results",
       "detail": {
         "reactionCardsCompleted": 2
@@ -226,7 +234,7 @@
       }
     },
     {
-      "at": "2026-04-11T12:25:12.788Z",
+      "at": "2026-06-02T22:24:32.844Z",
       "label": "buying-plan-opened",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -306,7 +314,7 @@
       }
     },
     {
-      "at": "2026-04-11T12:25:16.699Z",
+      "at": "2026-06-02T22:24:36.257Z",
       "label": "decision-brief",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -368,7 +376,7 @@
     {
       "flag": "primary-action-overload",
       "detail": "buying-plan-opened shows 6 visible primary buttons.",
-      "at": "2026-04-11T12:25:12.788Z"
+      "at": "2026-06-02T22:24:32.844Z"
     }
   ],
   "deadEndStates": [],

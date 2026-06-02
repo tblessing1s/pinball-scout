@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "startedAt": "2026-04-11T12:25:16.997Z",
-  "finishedAt": "2026-04-11T12:25:20.736Z",
+  "startedAt": "2026-06-02T22:24:36.861Z",
+  "finishedAt": "2026-06-02T22:24:40.499Z",
   "testTitle": "Theme-Driven Buyer uses compare flow and keeps front-runner continuity on resume",
   "personaName": "The Theme-Driven Buyer",
   "personaId": "theme-driven-buyer",
@@ -34,37 +34,37 @@
     {
       "type": "step",
       "step": "open-discovery",
-      "at": "2026-04-11T12:25:16.997Z"
+      "at": "2026-06-02T22:24:36.861Z"
     },
     {
       "type": "step",
       "step": "entry-and-context",
-      "at": "2026-04-11T12:25:17.072Z"
+      "at": "2026-06-02T22:24:37.283Z"
     },
     {
       "type": "step",
       "step": "taste-profile",
-      "at": "2026-04-11T12:25:17.704Z"
+      "at": "2026-06-02T22:24:37.727Z"
     },
     {
       "type": "step",
       "step": "reaction-loop",
-      "at": "2026-04-11T12:25:18.822Z"
+      "at": "2026-06-02T22:24:39.052Z"
     },
     {
       "type": "step",
       "step": "open-compare",
-      "at": "2026-04-11T12:25:20.402Z"
+      "at": "2026-06-02T22:24:39.724Z"
     },
     {
       "type": "step",
       "step": "compare-front-runner",
-      "at": "2026-04-11T12:25:20.565Z"
+      "at": "2026-06-02T22:24:39.997Z"
     },
     {
       "type": "step",
       "step": "front-runner-continuity",
-      "at": "2026-04-11T12:25:20.656Z"
+      "at": "2026-06-02T22:24:40.190Z"
     }
   ],
   "flowEnded": "http://127.0.0.1:4173/help.html?resume=1",
@@ -139,13 +139,21 @@
   },
   "checkpoints": [
     {
-      "at": "2026-04-11T12:25:17.072Z",
+      "at": "2026-06-02T22:24:37.283Z",
       "label": "entry-screen",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
       "heading": "Not sure where to start? We’ll help you narrow down your first pin.",
       "readinessSummary": "",
-      "visiblePrimaryButtons": [],
+      "visiblePrimaryButtons": [
+        {
+          "text": "Start here →",
+          "action": "",
+          "href": "",
+          "disabled": false,
+          "isSmall": false
+        }
+      ],
       "decisionState": {
         "frontRunnerSlug": "",
         "backupSlugs": [],
@@ -165,7 +173,7 @@
       }
     },
     {
-      "at": "2026-04-11T12:25:20.389Z",
+      "at": "2026-06-02T22:24:39.686Z",
       "label": "shortlist-results",
       "detail": {
         "reactionCardsCompleted": 2
@@ -226,35 +234,13 @@
       }
     },
     {
-      "at": "2026-04-11T12:25:20.557Z",
+      "at": "2026-06-02T22:24:39.931Z",
       "label": "compare-opened",
       "detail": {},
       "url": "http://127.0.0.1:4173/compare.html",
       "heading": "Pick One Now",
       "readinessSummary": "",
-      "visiblePrimaryButtons": [
-        {
-          "text": "Start tie-breaker",
-          "action": "tie-breaker-start",
-          "href": "",
-          "disabled": false,
-          "isSmall": false
-        },
-        {
-          "text": "Set as front-runner",
-          "action": "choose-front-runner:medieval-madness-remake",
-          "href": "",
-          "disabled": false,
-          "isSmall": true
-        },
-        {
-          "text": "Set as front-runner",
-          "action": "choose-front-runner:attack-from-mars-remake",
-          "href": "",
-          "disabled": false,
-          "isSmall": true
-        }
-      ],
+      "visiblePrimaryButtons": [],
       "decisionState": {
         "frontRunnerSlug": "medieval-madness-remake",
         "backupSlugs": [
@@ -265,7 +251,7 @@
         "compareState": {
           "presetMode": "balanced",
           "compareMode": "pick-one-now",
-          "tooClose": true,
+          "tooClose": false,
           "selectedSlugs": [
             "medieval-madness-remake",
             "attack-from-mars-remake"
@@ -285,7 +271,7 @@
       }
     },
     {
-      "at": "2026-04-11T12:25:20.644Z",
+      "at": "2026-06-02T22:24:40.162Z",
       "label": "compare-front-runner-selected",
       "detail": {},
       "url": "http://127.0.0.1:4173/compare.html",
@@ -344,7 +330,7 @@
       }
     },
     {
-      "at": "2026-04-11T12:25:20.727Z",
+      "at": "2026-06-02T22:24:40.472Z",
       "label": "resume-after-compare",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html?resume=1",

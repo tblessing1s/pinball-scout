@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "startedAt": "2026-04-11T12:24:59.659Z",
-  "finishedAt": "2026-04-11T12:25:08.785Z",
+  "startedAt": "2026-06-02T22:24:20.367Z",
+  "finishedAt": "2026-06-02T22:24:29.424Z",
   "testTitle": "Overwhelmed Novice reaches shortlist, buying plan, brief, and resume path",
   "personaName": "The Overwhelmed Novice",
   "personaId": "overwhelmed-novice",
@@ -34,37 +34,37 @@
     {
       "type": "step",
       "step": "open-discovery",
-      "at": "2026-04-11T12:24:59.659Z"
+      "at": "2026-06-02T22:24:20.367Z"
     },
     {
       "type": "step",
       "step": "entry-and-context",
-      "at": "2026-04-11T12:24:59.764Z"
+      "at": "2026-06-02T22:24:20.713Z"
     },
     {
       "type": "step",
       "step": "taste-profile",
-      "at": "2026-04-11T12:25:00.482Z"
+      "at": "2026-06-02T22:24:21.207Z"
     },
     {
       "type": "step",
       "step": "reaction-loop",
-      "at": "2026-04-11T12:25:01.645Z"
+      "at": "2026-06-02T22:24:22.487Z"
     },
     {
       "type": "step",
       "step": "open-buying-plan",
-      "at": "2026-04-11T12:25:03.745Z"
+      "at": "2026-06-02T22:24:24.614Z"
     },
     {
       "type": "step",
       "step": "complete-buying-plan",
-      "at": "2026-04-11T12:25:04.676Z"
+      "at": "2026-06-02T22:24:25.081Z"
     },
     {
       "type": "step",
       "step": "resume-reentry-check",
-      "at": "2026-04-11T12:25:08.695Z"
+      "at": "2026-06-02T22:24:28.952Z"
     }
   ],
   "flowEnded": "http://127.0.0.1:4173/help.html?resume=1&brief=1",
@@ -94,8 +94,8 @@
     "readinessSummary": "",
     "visiblePrimaryButtons": [
       {
-        "text": "Continue buying plan",
-        "action": "open-sourcing:attack-from-mars-remake",
+        "text": "Back to shortlist",
+        "action": "back-to-results",
         "href": "",
         "disabled": false,
         "isSmall": false
@@ -148,13 +148,21 @@
   },
   "checkpoints": [
     {
-      "at": "2026-04-11T12:24:59.764Z",
+      "at": "2026-06-02T22:24:20.713Z",
       "label": "entry-screen",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
       "heading": "Not sure where to start? We’ll help you narrow down your first pin.",
       "readinessSummary": "",
-      "visiblePrimaryButtons": [],
+      "visiblePrimaryButtons": [
+        {
+          "text": "Start here →",
+          "action": "",
+          "href": "",
+          "disabled": false,
+          "isSmall": false
+        }
+      ],
       "decisionState": {
         "frontRunnerSlug": "",
         "backupSlugs": [],
@@ -174,7 +182,7 @@
       }
     },
     {
-      "at": "2026-04-11T12:25:03.728Z",
+      "at": "2026-06-02T22:24:24.573Z",
       "label": "shortlist-results",
       "detail": {
         "reactionCardsCompleted": 6
@@ -244,7 +252,7 @@
       }
     },
     {
-      "at": "2026-04-11T12:25:04.663Z",
+      "at": "2026-06-02T22:24:25.052Z",
       "label": "buying-plan-opened",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -298,7 +306,7 @@
       }
     },
     {
-      "at": "2026-04-11T12:25:08.684Z",
+      "at": "2026-06-02T22:24:28.911Z",
       "label": "decision-brief",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -359,7 +367,7 @@
       }
     },
     {
-      "at": "2026-04-11T12:25:08.770Z",
+      "at": "2026-06-02T22:24:29.396Z",
       "label": "resume-decision-brief",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html?resume=1&brief=1",
@@ -367,8 +375,8 @@
       "readinessSummary": "",
       "visiblePrimaryButtons": [
         {
-          "text": "Continue buying plan",
-          "action": "open-sourcing:attack-from-mars-remake",
+          "text": "Back to shortlist",
+          "action": "back-to-results",
           "href": "",
           "disabled": false,
           "isSmall": false
@@ -424,7 +432,7 @@
     {
       "flag": "primary-action-overload",
       "detail": "shortlist-results shows 4 visible primary buttons.",
-      "at": "2026-04-11T12:25:03.728Z"
+      "at": "2026-06-02T22:24:24.573Z"
     }
   ],
   "deadEndStates": [],
