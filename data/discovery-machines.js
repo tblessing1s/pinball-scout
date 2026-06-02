@@ -5,6 +5,7 @@ import { machineVideoOverrideIndex } from "./machine-video-overrides.js";
 import { indexBy } from "../lib/collection-utils.js";
 import { searchLink, youtubeSearchUrl } from "../lib/url-utils.js";
 import { TRAIT_KEYS } from "./refinement-model.js";
+import { findRelatedMachines } from "./machine-components.js";
 
 const machineIndex = indexBy(machines, "slug");
 
@@ -21,14 +22,6 @@ const manualTraitOverrides = {
   "funhouse": { theme_integration: 4, beginner_friendly: 4, replayability: 3 }
 };
 
-const manualProxyOverrides = {
-  "godzilla-pro": ["foo-fighters-pro", "jurassic-park-pro"],
-  "jurassic-park-pro": ["godzilla-pro", "avengers-infinity-quest-pro"],
-  "deadpool-pro": ["foo-fighters-pro", "attack-from-mars-remake"],
-  "iron-maiden-pro": ["foo-fighters-pro", "jurassic-park-pro"],
-  "attack-from-mars-remake": ["medieval-madness-remake", "deadpool-pro"],
-  "medieval-madness-remake": ["attack-from-mars-remake", "deadpool-pro"]
-};
 
 function buildVideoProfile(machine) {
   const override = machineVideoOverrideIndex.get(machine.slug) || {};
@@ -815,18 +808,31 @@ function proxySimilarity(machine, candidate) {
   return sharedTags * 1.6 + traitSimilarity;
 }
 
-export const discoveryMachines = baseDiscoveryMachines.map((machine) => ({
-  ...machine,
-  proxy_machine_ids: [
-    ...((manualProxyOverrides[machine.slug] || []).filter(Boolean)),
-    ...baseDiscoveryMachines
-    .filter((candidate) => candidate.id !== machine.id)
-    .sort((a, b) => proxySimilarity(machine, b) - proxySimilarity(machine, a))
-    .slice(0, 6)
-    .map((candidate) => candidate.id)
-  ]
-    .filter((id, index, list) => list.indexOf(id) === index && id !== machine.id)
+// Build slug→id lookup for proxy resolution.
+const slugToId = new Map(baseDiscoveryMachines.map((m) => [m.slug, m.id]));
+
+export const discoveryMachines = baseDiscoveryMachines.map((machine) => {
+  // Component-based proxies: machines with the most shared components come first.
+  const candidateSlugs = baseDiscoveryMachines
+    .filter((c) => c.id !== machine.id)
+    .map((c) => c.slug);
+  const componentProxies = findRelatedMachines(machine.slug, candidateSlugs)
     .slice(0, 3)
-}));
+    .map((item) => slugToId.get(item.slug))
+    .filter(Boolean);
+
+  // Trait/tag fallback: existing similarity score for any gaps.
+  const traitProxies = baseDiscoveryMachines
+    .filter((c) => c.id !== machine.id)
+    .sort((a, b) => proxySimilarity(machine, b) - proxySimilarity(machine, a))
+    .slice(0, 4)
+    .map((c) => c.id);
+
+  const proxy_machine_ids = [...componentProxies, ...traitProxies]
+    .filter((id, index, list) => list.indexOf(id) === index && id !== machine.id)
+    .slice(0, 3);
+
+  return { ...machine, proxy_machine_ids };
+});
 
 export const discoveryMachineIndex = indexBy(discoveryMachines, "id");

@@ -632,6 +632,16 @@ select:focus, input:focus, textarea:focus {
   display: flex;
   flex-direction: column;
 }
+.pivot-connection-note {
+  margin: 0 0 .85rem;
+  font-size: .82rem;
+  color: var(--accent);
+  background: rgba(27,202,211,0.08);
+  border: 1px solid rgba(27,202,211,0.2);
+  border-radius: var(--r-sm);
+  padding: .5rem .75rem;
+  line-height: 1.45;
+}
 .taste-pivot-card .machine-image-frame--thumb { min-height: 160px; }
 .taste-pivot-card .machine-image-frame--thumb .machine-image,
 .taste-pivot-card .machine-image-frame--thumb .card-image {
