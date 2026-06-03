@@ -1,24 +1,24 @@
 {
   "schemaVersion": 2,
-  "startedAt": "2026-06-03T22:05:37.916Z",
-  "finishedAt": "2026-06-03T22:05:41.710Z",
-  "testTitle": "Theme-Driven Buyer uses compare flow and keeps front-runner continuity on resume",
-  "personaName": "The Theme-Driven Buyer",
-  "personaId": "theme-driven-buyer",
-  "profile": "Responds to world/theme pull and needs help translating attraction into a usable decision.",
+  "startedAt": "2026-06-03T22:05:34.364Z",
+  "finishedAt": "2026-06-03T22:05:37.305Z",
+  "testTitle": "Contrarian with mostly-negative reactions still reaches a usable shortlist",
+  "personaName": "The Contrarian",
+  "personaId": "the-contrarian",
+  "profile": "Dismisses most machines. Tests whether the engine degrades gracefully with minimal positive signal — does it crash, return nothing, or still find a usable shortlist?",
   "persona": {
-    "id": "theme-driven-buyer",
-    "name": "The Theme-Driven Buyer",
-    "profile": "Responds to world/theme pull and needs help translating attraction into a usable decision.",
+    "id": "the-contrarian",
+    "name": "The Contrarian",
+    "profile": "Dismisses most machines. Tests whether the engine degrades gracefully with minimal positive signal — does it crash, return nothing, or still find a usable shortlist?",
     "tendencies": [
-      "reacts quickly to theme fit",
-      "accepts some complexity for excitement",
-      "needs compare to resolve close choices"
+      "rejects most machines outright",
+      "very high bar for approval",
+      "extreme taste preference edges"
     ],
     "expectations": [
-      "theme-first path should feel natural",
-      "compare should clarify choice",
-      "front-runner should persist on resume"
+      "engine should not crash or return an empty shortlist",
+      "fallback logic should produce at least one recommendation",
+      "results screen should still offer a workable path forward"
     ]
   },
   "pathTaken": [
@@ -26,70 +26,58 @@
     "entry-and-context",
     "taste-profile",
     "reaction-loop",
-    "open-compare",
-    "compare-front-runner",
-    "front-runner-continuity"
+    "open-buying-plan"
   ],
   "timeline": [
     {
       "type": "step",
       "step": "open-discovery",
-      "at": "2026-06-03T22:05:37.916Z"
+      "at": "2026-06-03T22:05:34.364Z"
     },
     {
       "type": "step",
       "step": "entry-and-context",
-      "at": "2026-06-03T22:05:38.153Z"
+      "at": "2026-06-03T22:05:34.754Z"
     },
     {
       "type": "step",
       "step": "taste-profile",
-      "at": "2026-06-03T22:05:38.586Z"
+      "at": "2026-06-03T22:05:35.237Z"
     },
     {
       "type": "step",
       "step": "reaction-loop",
-      "at": "2026-06-03T22:05:39.841Z"
+      "at": "2026-06-03T22:05:36.503Z"
     },
     {
       "type": "step",
-      "step": "open-compare",
-      "at": "2026-06-03T22:05:40.876Z"
-    },
-    {
-      "type": "step",
-      "step": "compare-front-runner",
-      "at": "2026-06-03T22:05:41.206Z"
-    },
-    {
-      "type": "step",
-      "step": "front-runner-continuity",
-      "at": "2026-06-03T22:05:41.393Z"
+      "step": "open-buying-plan",
+      "at": "2026-06-03T22:05:37.200Z"
     }
   ],
-  "flowEnded": "http://127.0.0.1:4173/help.html?resume=1",
+  "flowEnded": "http://127.0.0.1:4173/help.html",
   "shortlistReached": true,
-  "compareReached": true,
-  "frontRunnerSelected": true,
+  "compareReached": false,
+  "frontRunnerSelected": false,
   "buyingPlanReached": true,
   "decisionBriefReached": false,
   "resumeReentryValidated": false,
   "systemsTouched": {
     "discovery": true,
     "shortlist": true,
-    "compare": true,
+    "compare": false,
     "buyingPlan": true,
     "decisionBrief": false,
     "resume": false
   },
   "continuity": {
-    "frontRunnerPreservedOnResume": true,
-    "compareContextPreserved": true,
+    "frontRunnerPreservedOnResume": null,
+    "compareContextPreserved": null,
     "decisionBriefMatchesDecisionState": null
   },
   "finalState": {
-    "label": "resume-after-compare",
-    "url": "http://127.0.0.1:4173/help.html?resume=1",
+    "label": "buying-plan-opened",
+    "url": "http://127.0.0.1:4173/help.html",
     "heading": "Not sure where to start? We’ll help you narrow down your first pin.",
     "readinessSummary": "Status: Not ready · Choose used or new route to unlock required checks.",
     "visiblePrimaryButtons": [
@@ -116,9 +104,9 @@
       "selectedPathType": "still-deciding",
       "currentPlanStep": 1,
       "compareState": {
-        "presetMode": "most-excitement",
+        "presetMode": "balanced",
         "compareMode": "pick-one-now",
-        "tooClose": true,
+        "tooClose": false,
         "selectedSlugs": [
           "medieval-madness-remake",
           "attack-from-mars-remake"
@@ -129,17 +117,17 @@
     },
     "discoveryState": {
       "screen": "sourcing",
-      "mode": "",
-      "deckIndex": 0,
-      "reactionCount": 0,
+      "mode": "discovery",
+      "deckIndex": 1,
+      "reactionCount": 2,
       "sourcingMachineId": "medieval-madness-remake",
       "moreActionsOpen": false,
-      "tasteAnswerCount": 0
+      "tasteAnswerCount": 6
     }
   },
   "checkpoints": [
     {
-      "at": "2026-06-03T22:05:38.153Z",
+      "at": "2026-06-03T22:05:34.754Z",
       "label": "entry-screen",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -173,7 +161,7 @@
       }
     },
     {
-      "at": "2026-06-03T22:05:40.839Z",
+      "at": "2026-06-03T22:05:37.161Z",
       "label": "shortlist-results",
       "detail": {
         "reactionCardsCompleted": 2
@@ -234,128 +222,10 @@
       }
     },
     {
-      "at": "2026-06-03T22:05:41.170Z",
-      "label": "compare-opened",
+      "at": "2026-06-03T22:05:37.275Z",
+      "label": "buying-plan-opened",
       "detail": {},
-      "url": "http://127.0.0.1:4173/compare.html",
-      "heading": "Pick One Now",
-      "readinessSummary": "",
-      "visiblePrimaryButtons": [
-        {
-          "text": "Start tie-breaker",
-          "action": "tie-breaker-start",
-          "href": "",
-          "disabled": false,
-          "isSmall": false
-        },
-        {
-          "text": "Set as front-runner",
-          "action": "choose-front-runner:medieval-madness-remake",
-          "href": "",
-          "disabled": false,
-          "isSmall": true
-        },
-        {
-          "text": "Set as front-runner",
-          "action": "choose-front-runner:attack-from-mars-remake",
-          "href": "",
-          "disabled": false,
-          "isSmall": true
-        }
-      ],
-      "decisionState": {
-        "frontRunnerSlug": "medieval-madness-remake",
-        "backupSlugs": [
-          "attack-from-mars-remake"
-        ],
-        "selectedPathType": "",
-        "currentPlanStep": 1,
-        "compareState": {
-          "presetMode": "balanced",
-          "compareMode": "pick-one-now",
-          "tooClose": true,
-          "selectedSlugs": [
-            "medieval-madness-remake",
-            "attack-from-mars-remake"
-          ],
-          "temporaryPrimaryCandidate": ""
-        },
-        "decisionBrief": null
-      },
-      "discoveryState": {
-        "screen": "results",
-        "mode": "discovery",
-        "deckIndex": 1,
-        "reactionCount": 2,
-        "sourcingMachineId": "",
-        "moreActionsOpen": true,
-        "tasteAnswerCount": 6
-      }
-    },
-    {
-      "at": "2026-06-03T22:05:41.366Z",
-      "label": "compare-front-runner-selected",
-      "detail": {},
-      "url": "http://127.0.0.1:4173/compare.html",
-      "heading": "Pick One Now",
-      "readinessSummary": "",
-      "visiblePrimaryButtons": [
-        {
-          "text": "Start tie-breaker",
-          "action": "tie-breaker-start",
-          "href": "",
-          "disabled": false,
-          "isSmall": false
-        },
-        {
-          "text": "Set as front-runner",
-          "action": "choose-front-runner:medieval-madness-remake",
-          "href": "",
-          "disabled": false,
-          "isSmall": true
-        },
-        {
-          "text": "Set as front-runner",
-          "action": "choose-front-runner:attack-from-mars-remake",
-          "href": "",
-          "disabled": false,
-          "isSmall": true
-        }
-      ],
-      "decisionState": {
-        "frontRunnerSlug": "medieval-madness-remake",
-        "backupSlugs": [
-          "attack-from-mars-remake"
-        ],
-        "selectedPathType": "",
-        "currentPlanStep": 1,
-        "compareState": {
-          "presetMode": "most-excitement",
-          "compareMode": "pick-one-now",
-          "tooClose": true,
-          "selectedSlugs": [
-            "medieval-madness-remake",
-            "attack-from-mars-remake"
-          ],
-          "temporaryPrimaryCandidate": ""
-        },
-        "decisionBrief": null
-      },
-      "discoveryState": {
-        "screen": "results",
-        "mode": "discovery",
-        "deckIndex": 1,
-        "reactionCount": 2,
-        "sourcingMachineId": "",
-        "moreActionsOpen": true,
-        "tasteAnswerCount": 6
-      }
-    },
-    {
-      "at": "2026-06-03T22:05:41.689Z",
-      "label": "resume-after-compare",
-      "detail": {},
-      "url": "http://127.0.0.1:4173/help.html?resume=1",
+      "url": "http://127.0.0.1:4173/help.html",
       "heading": "Not sure where to start? We’ll help you narrow down your first pin.",
       "readinessSummary": "Status: Not ready · Choose used or new route to unlock required checks.",
       "visiblePrimaryButtons": [
@@ -382,9 +252,9 @@
         "selectedPathType": "still-deciding",
         "currentPlanStep": 1,
         "compareState": {
-          "presetMode": "most-excitement",
+          "presetMode": "balanced",
           "compareMode": "pick-one-now",
-          "tooClose": true,
+          "tooClose": false,
           "selectedSlugs": [
             "medieval-madness-remake",
             "attack-from-mars-remake"
@@ -395,12 +265,12 @@
       },
       "discoveryState": {
         "screen": "sourcing",
-        "mode": "",
-        "deckIndex": 0,
-        "reactionCount": 0,
+        "mode": "discovery",
+        "deckIndex": 1,
+        "reactionCount": 2,
         "sourcingMachineId": "medieval-madness-remake",
         "moreActionsOpen": false,
-        "tasteAnswerCount": 0
+        "tasteAnswerCount": 6
       }
     }
   ],

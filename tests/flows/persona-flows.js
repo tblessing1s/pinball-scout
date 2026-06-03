@@ -177,6 +177,68 @@ export async function runResumeCheck(page, outcome) {
   });
 }
 
+// ── Calibration-path helpers ───────────────────────────────────────────────
+
+export async function chooseEntryAndContextCalibration(page, persona, outcome) {
+  addPathStep(outcome, "entry-and-context");
+  await clickChoice(page, "[data-entry='yes']", "Entry choice for 'yes' not available.");
+
+  // Wait for calibration setup to render (played-machine grid is unique to this screen)
+  await expect(page.locator("[data-toggle-played]").first(), "Calibration setup did not load played machine grid.").toBeVisible();
+
+  for (const [question, value] of Object.entries(persona.context)) {
+    await clickChoice(
+      page,
+      `[data-context-choice="${question}:${value}"]`,
+      `Context choice missing for ${question}:${value}.`
+    );
+  }
+
+  for (const machineId of (persona.playedMachineIds || [])) {
+    await clickChoice(
+      page,
+      `[data-toggle-played="${machineId}"]`,
+      `Played machine toggle not found for ID: ${machineId}.`
+    );
+  }
+
+  await clickChoice(page, "[data-action='start-calibration']", "Could not continue from calibration setup.");
+}
+
+export async function runCalibrationLoopToResults(page, persona, outcome) {
+  addPathStep(outcome, "reaction-loop");
+  const maxCards = 12;
+  let cardIndex = 0;
+
+  while (cardIndex < maxCards) {
+    // Calibration skips the reflection screen and goes straight to results
+    if (await resultsNextStep(page).isVisible()) break;
+
+    const reactionButtons = page.locator("[data-reaction]");
+    await expect(reactionButtons, "No reaction buttons visible — calibration round may be stuck.").toHaveCount(3);
+
+    const likedAspect = persona.likedAspectSequence[cardIndex % persona.likedAspectSequence.length];
+    const concern = persona.concernSequence[cardIndex % persona.concernSequence.length];
+    const reaction = persona.reactionSequence[cardIndex % persona.reactionSequence.length];
+
+    await page.locator(`[data-draft-choice="likedAspect:${likedAspect}"]`).click();
+    await page.locator(`[data-draft-choice="concern:${concern}"]`).click();
+    await page.locator(`[data-reaction="${reaction}"]`).click();
+    cardIndex += 1;
+  }
+
+  await expect(resultsNextStep(page), "Results screen did not load after calibration round.").toBeVisible();
+  markReached(outcome, "shortlistReached");
+  await capturePersonaCheckpoint(page, outcome, "shortlist-results", { reactionCardsCompleted: cardIndex });
+  await assertFrontRunnerPresent(page, outcome, "Calibration shortlist results");
+  await assertClearPrimaryNextAction(page, outcome, {
+    label: "Calibration shortlist results",
+    minPrimaryActions: 1,
+    maxPrimaryActions: 3,
+    expectedActions: ["open-sourcing:"]
+  });
+}
+
 export async function openCompareFromResults(page, outcome) {
   addPathStep(outcome, "open-compare");
   await clickChoice(page, "[data-action='toggle-more-actions']", "Could not open more actions area on results.");

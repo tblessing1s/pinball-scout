@@ -1,24 +1,24 @@
 {
   "schemaVersion": 2,
-  "startedAt": "2026-06-03T22:04:52.742Z",
-  "finishedAt": "2026-06-03T22:05:01.689Z",
-  "testTitle": "Overwhelmed Novice reaches shortlist, buying plan, brief, and resume path",
-  "personaName": "The Overwhelmed Novice",
-  "personaId": "overwhelmed-novice",
-  "profile": "New buyer, easily overloaded, needs obvious next actions and low-friction progression.",
+  "startedAt": "2026-06-03T22:05:17.237Z",
+  "finishedAt": "2026-06-03T22:05:25.250Z",
+  "testTitle": "On-the-Fence Researcher lands on weak-signal results and still has a path forward",
+  "personaName": "The On-the-Fence Researcher",
+  "personaId": "on-the-fence-researcher",
+  "profile": "Has been researching for months. Mixed reactions across the deck, struggles to commit. Expects the tool to surface a clear low-confidence signal and a concrete path forward.",
   "persona": {
-    "id": "overwhelmed-novice",
-    "name": "The Overwhelmed Novice",
-    "profile": "New buyer, easily overloaded, needs obvious next actions and low-friction progression.",
+    "id": "on-the-fence-researcher",
+    "name": "The On-the-Fence Researcher",
+    "profile": "Has been researching for months. Mixed reactions across the deck, struggles to commit. Expects the tool to surface a clear low-confidence signal and a concrete path forward.",
     "tendencies": [
-      "hesitates when too many parallel actions appear",
-      "prefers safe defaults",
-      "avoids advanced side paths early"
+      "over-researches",
+      "rarely gives a strong reaction",
+      "gets stuck before committing"
     ],
     "expectations": [
-      "a clear primary CTA on each major screen",
-      "no dead-end after shortlist",
-      "simple path into buying plan"
+      "low or medium confidence result with actionable next steps",
+      "no dead-end at results screen",
+      "refinement path or compare is clearly offered"
     ]
   },
   "pathTaken": [
@@ -27,82 +27,76 @@
     "taste-profile",
     "reaction-loop",
     "open-buying-plan",
-    "complete-buying-plan",
-    "resume-reentry-check"
+    "complete-buying-plan"
   ],
   "timeline": [
     {
       "type": "step",
       "step": "open-discovery",
-      "at": "2026-06-03T22:04:52.742Z"
+      "at": "2026-06-03T22:05:17.237Z"
     },
     {
       "type": "step",
       "step": "entry-and-context",
-      "at": "2026-06-03T22:04:53.107Z"
+      "at": "2026-06-03T22:05:17.511Z"
     },
     {
       "type": "step",
       "step": "taste-profile",
-      "at": "2026-06-03T22:04:53.602Z"
+      "at": "2026-06-03T22:05:18.008Z"
     },
     {
       "type": "step",
       "step": "reaction-loop",
-      "at": "2026-06-03T22:04:54.879Z"
+      "at": "2026-06-03T22:05:19.246Z"
     },
     {
       "type": "step",
       "step": "open-buying-plan",
-      "at": "2026-06-03T22:04:57.737Z"
+      "at": "2026-06-03T22:05:21.646Z"
     },
     {
       "type": "step",
       "step": "complete-buying-plan",
-      "at": "2026-06-03T22:04:57.846Z"
-    },
-    {
-      "type": "step",
-      "step": "resume-reentry-check",
-      "at": "2026-06-03T22:05:01.369Z"
+      "at": "2026-06-03T22:05:21.744Z"
     }
   ],
-  "flowEnded": "http://127.0.0.1:4173/help.html?resume=1&brief=1",
+  "flowEnded": "http://127.0.0.1:4173/help.html",
   "shortlistReached": true,
   "compareReached": false,
   "frontRunnerSelected": false,
   "buyingPlanReached": true,
   "decisionBriefReached": true,
-  "resumeReentryValidated": true,
+  "resumeReentryValidated": false,
   "systemsTouched": {
     "discovery": true,
     "shortlist": true,
     "compare": false,
     "buyingPlan": true,
     "decisionBrief": true,
-    "resume": true
+    "resume": false
   },
   "continuity": {
-    "frontRunnerPreservedOnResume": true,
+    "frontRunnerPreservedOnResume": null,
     "compareContextPreserved": null,
     "decisionBriefMatchesDecisionState": true
   },
   "finalState": {
-    "label": "resume-decision-brief",
-    "url": "http://127.0.0.1:4173/help.html?resume=1&brief=1",
+    "label": "decision-brief",
+    "url": "http://127.0.0.1:4173/help.html",
     "heading": "Not sure where to start? We’ll help you narrow down your first pin.",
     "readinessSummary": "",
     "visiblePrimaryButtons": [
       {
-        "text": "Back to shortlist",
-        "action": "back-to-results",
+        "text": "Continue buying plan",
+        "action": "open-sourcing:mandalorian-pro",
         "href": "",
         "disabled": false,
         "isSmall": false
       }
     ],
     "decisionState": {
-      "frontRunnerSlug": "attack-from-mars-remake",
+      "frontRunnerSlug": "mandalorian-pro",
       "backupSlugs": [
         "godzilla-pro",
         "deadpool-pro"
@@ -114,19 +108,19 @@
         "compareMode": "pick-one-now",
         "tooClose": false,
         "selectedSlugs": [
-          "attack-from-mars-remake",
+          "mandalorian-pro",
           "godzilla-pro",
           "deadpool-pro"
         ],
         "temporaryPrimaryCandidate": ""
       },
       "decisionBrief": {
-        "machineSlug": "attack-from-mars-remake",
+        "machineSlug": "mandalorian-pro",
         "pathType": "used",
-        "confidenceTitle": "Strong shortlist signal",
+        "confidenceTitle": "Early shortlist, not final yet",
         "readinessLabel": "Ready to proceed",
         "nextActions": [
-          "Find 2-3 credible used listings for Attack from Mars Remake.",
+          "Find 2-3 credible used listings for The Mandalorian.",
           "Confirm condition notes, maintenance history, and all-in delivered price.",
           "Shortlist one seller and prepare your first outreach message."
         ],
@@ -138,17 +132,17 @@
     },
     "discoveryState": {
       "screen": "decision-brief",
-      "mode": "",
-      "deckIndex": 0,
-      "reactionCount": 0,
-      "sourcingMachineId": "",
+      "mode": "discovery",
+      "deckIndex": 5,
+      "reactionCount": 6,
+      "sourcingMachineId": "mandalorian-pro",
       "moreActionsOpen": false,
-      "tasteAnswerCount": 0
+      "tasteAnswerCount": 6
     }
   },
   "checkpoints": [
     {
-      "at": "2026-06-03T22:04:53.107Z",
+      "at": "2026-06-03T22:05:17.511Z",
       "label": "entry-screen",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -182,7 +176,7 @@
       }
     },
     {
-      "at": "2026-06-03T22:04:57.699Z",
+      "at": "2026-06-03T22:05:21.592Z",
       "label": "shortlist-results",
       "detail": {
         "reactionCardsCompleted": 6
@@ -193,21 +187,14 @@
       "visiblePrimaryButtons": [
         {
           "text": "Continue buying plan",
-          "action": "open-sourcing:attack-from-mars-remake",
+          "action": "open-sourcing:mandalorian-pro",
           "href": "",
           "disabled": false,
           "isSmall": false
         },
         {
           "text": "Continue buying plan",
-          "action": "open-sourcing:attack-from-mars-remake",
-          "href": "",
-          "disabled": false,
-          "isSmall": true
-        },
-        {
-          "text": "Set as front-runner",
-          "action": "open-sourcing:deadpool-pro",
+          "action": "open-sourcing:mandalorian-pro",
           "href": "",
           "disabled": false,
           "isSmall": true
@@ -221,7 +208,7 @@
         }
       ],
       "decisionState": {
-        "frontRunnerSlug": "attack-from-mars-remake",
+        "frontRunnerSlug": "mandalorian-pro",
         "backupSlugs": [
           "godzilla-pro",
           "deadpool-pro"
@@ -233,7 +220,7 @@
           "compareMode": "pick-one-now",
           "tooClose": false,
           "selectedSlugs": [
-            "attack-from-mars-remake",
+            "mandalorian-pro",
             "godzilla-pro",
             "deadpool-pro"
           ],
@@ -252,7 +239,7 @@
       }
     },
     {
-      "at": "2026-06-03T22:04:57.814Z",
+      "at": "2026-06-03T22:05:21.711Z",
       "label": "buying-plan-opened",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -275,7 +262,7 @@
         }
       ],
       "decisionState": {
-        "frontRunnerSlug": "attack-from-mars-remake",
+        "frontRunnerSlug": "mandalorian-pro",
         "backupSlugs": [
           "godzilla-pro",
           "deadpool-pro"
@@ -287,7 +274,7 @@
           "compareMode": "pick-one-now",
           "tooClose": false,
           "selectedSlugs": [
-            "attack-from-mars-remake",
+            "mandalorian-pro",
             "godzilla-pro",
             "deadpool-pro"
           ],
@@ -300,13 +287,13 @@
         "mode": "discovery",
         "deckIndex": 5,
         "reactionCount": 6,
-        "sourcingMachineId": "attack-from-mars-remake",
+        "sourcingMachineId": "mandalorian-pro",
         "moreActionsOpen": false,
         "tasteAnswerCount": 6
       }
     },
     {
-      "at": "2026-06-03T22:05:01.333Z",
+      "at": "2026-06-03T22:05:25.217Z",
       "label": "decision-brief",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -315,14 +302,14 @@
       "visiblePrimaryButtons": [
         {
           "text": "Continue buying plan",
-          "action": "open-sourcing:attack-from-mars-remake",
+          "action": "open-sourcing:mandalorian-pro",
           "href": "",
           "disabled": false,
           "isSmall": false
         }
       ],
       "decisionState": {
-        "frontRunnerSlug": "attack-from-mars-remake",
+        "frontRunnerSlug": "mandalorian-pro",
         "backupSlugs": [
           "godzilla-pro",
           "deadpool-pro"
@@ -334,19 +321,19 @@
           "compareMode": "pick-one-now",
           "tooClose": false,
           "selectedSlugs": [
-            "attack-from-mars-remake",
+            "mandalorian-pro",
             "godzilla-pro",
             "deadpool-pro"
           ],
           "temporaryPrimaryCandidate": ""
         },
         "decisionBrief": {
-          "machineSlug": "attack-from-mars-remake",
+          "machineSlug": "mandalorian-pro",
           "pathType": "used",
-          "confidenceTitle": "Strong shortlist signal",
+          "confidenceTitle": "Early shortlist, not final yet",
           "readinessLabel": "Ready to proceed",
           "nextActions": [
-            "Find 2-3 credible used listings for Attack from Mars Remake.",
+            "Find 2-3 credible used listings for The Mandalorian.",
             "Confirm condition notes, maintenance history, and all-in delivered price.",
             "Shortlist one seller and prepare your first outreach message."
           ],
@@ -361,80 +348,13 @@
         "mode": "discovery",
         "deckIndex": 5,
         "reactionCount": 6,
-        "sourcingMachineId": "attack-from-mars-remake",
+        "sourcingMachineId": "mandalorian-pro",
         "moreActionsOpen": false,
         "tasteAnswerCount": 6
       }
-    },
-    {
-      "at": "2026-06-03T22:05:01.660Z",
-      "label": "resume-decision-brief",
-      "detail": {},
-      "url": "http://127.0.0.1:4173/help.html?resume=1&brief=1",
-      "heading": "Not sure where to start? We’ll help you narrow down your first pin.",
-      "readinessSummary": "",
-      "visiblePrimaryButtons": [
-        {
-          "text": "Back to shortlist",
-          "action": "back-to-results",
-          "href": "",
-          "disabled": false,
-          "isSmall": false
-        }
-      ],
-      "decisionState": {
-        "frontRunnerSlug": "attack-from-mars-remake",
-        "backupSlugs": [
-          "godzilla-pro",
-          "deadpool-pro"
-        ],
-        "selectedPathType": "used",
-        "currentPlanStep": 4,
-        "compareState": {
-          "presetMode": "balanced",
-          "compareMode": "pick-one-now",
-          "tooClose": false,
-          "selectedSlugs": [
-            "attack-from-mars-remake",
-            "godzilla-pro",
-            "deadpool-pro"
-          ],
-          "temporaryPrimaryCandidate": ""
-        },
-        "decisionBrief": {
-          "machineSlug": "attack-from-mars-remake",
-          "pathType": "used",
-          "confidenceTitle": "Strong shortlist signal",
-          "readinessLabel": "Ready to proceed",
-          "nextActions": [
-            "Find 2-3 credible used listings for Attack from Mars Remake.",
-            "Confirm condition notes, maintenance history, and all-in delivered price.",
-            "Shortlist one seller and prepare your first outreach message."
-          ],
-          "backupSlugs": [
-            "godzilla-pro",
-            "deadpool-pro"
-          ]
-        }
-      },
-      "discoveryState": {
-        "screen": "decision-brief",
-        "mode": "",
-        "deckIndex": 0,
-        "reactionCount": 0,
-        "sourcingMachineId": "",
-        "moreActionsOpen": false,
-        "tasteAnswerCount": 0
-      }
     }
   ],
-  "confusionFlags": [
-    {
-      "flag": "primary-action-overload",
-      "detail": "shortlist-results shows 4 visible primary buttons.",
-      "at": "2026-06-03T22:04:57.699Z"
-    }
-  ],
+  "confusionFlags": [],
   "deadEndStates": [],
   "status": "passed",
   "error": null
