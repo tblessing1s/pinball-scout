@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "startedAt": "2026-06-03T03:23:34.254Z",
-  "finishedAt": "2026-06-03T03:23:37.801Z",
+  "startedAt": "2026-06-03T03:32:07.259Z",
+  "finishedAt": "2026-06-03T03:32:10.318Z",
   "testTitle": "Theme-Driven Buyer uses compare flow and keeps front-runner continuity on resume",
   "personaName": "The Theme-Driven Buyer",
   "personaId": "theme-driven-buyer",
@@ -34,37 +34,37 @@
     {
       "type": "step",
       "step": "open-discovery",
-      "at": "2026-06-03T03:23:34.254Z"
+      "at": "2026-06-03T03:32:07.259Z"
     },
     {
       "type": "step",
       "step": "entry-and-context",
-      "at": "2026-06-03T03:23:34.470Z"
+      "at": "2026-06-03T03:32:07.551Z"
     },
     {
       "type": "step",
       "step": "taste-profile",
-      "at": "2026-06-03T03:23:34.823Z"
+      "at": "2026-06-03T03:32:07.900Z"
     },
     {
       "type": "step",
       "step": "reaction-loop",
-      "at": "2026-06-03T03:23:36.039Z"
+      "at": "2026-06-03T03:32:09.120Z"
     },
     {
       "type": "step",
       "step": "open-compare",
-      "at": "2026-06-03T03:23:37.212Z"
+      "at": "2026-06-03T03:32:09.698Z"
     },
     {
       "type": "step",
       "step": "compare-front-runner",
-      "at": "2026-06-03T03:23:37.430Z"
+      "at": "2026-06-03T03:32:09.946Z"
     },
     {
       "type": "step",
       "step": "front-runner-continuity",
-      "at": "2026-06-03T03:23:37.592Z"
+      "at": "2026-06-03T03:32:10.097Z"
     }
   ],
   "flowEnded": "http://127.0.0.1:4173/help.html?resume=1",
@@ -139,7 +139,7 @@
   },
   "checkpoints": [
     {
-      "at": "2026-06-03T03:23:34.470Z",
+      "at": "2026-06-03T03:32:07.551Z",
       "label": "entry-screen",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -173,7 +173,7 @@
       }
     },
     {
-      "at": "2026-06-03T03:23:37.185Z",
+      "at": "2026-06-03T03:32:09.668Z",
       "label": "shortlist-results",
       "detail": {
         "reactionCardsCompleted": 2
@@ -234,7 +234,7 @@
       }
     },
     {
-      "at": "2026-06-03T03:23:37.409Z",
+      "at": "2026-06-03T03:32:09.926Z",
       "label": "compare-opened",
       "detail": {},
       "url": "http://127.0.0.1:4173/compare.html",
@@ -293,7 +293,7 @@
       }
     },
     {
-      "at": "2026-06-03T03:23:37.573Z",
+      "at": "2026-06-03T03:32:10.077Z",
       "label": "compare-front-runner-selected",
       "detail": {},
       "url": "http://127.0.0.1:4173/compare.html",
@@ -352,7 +352,7 @@
       }
     },
     {
-      "at": "2026-06-03T03:23:37.784Z",
+      "at": "2026-06-03T03:32:10.300Z",
       "label": "resume-after-compare",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html?resume=1",
