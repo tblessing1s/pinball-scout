@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "startedAt": "2026-06-03T22:05:09.178Z",
-  "finishedAt": "2026-06-03T22:05:16.473Z",
+  "startedAt": "2026-06-04T02:15:39.822Z",
+  "finishedAt": "2026-06-04T02:15:49.013Z",
   "testTitle": "Ready-to-Buy Returner uses calibration path and reaches decision brief",
   "personaName": "The Ready-to-Buy Returner",
   "personaId": "ready-to-buy-returner",
@@ -33,32 +33,32 @@
     {
       "type": "step",
       "step": "open-discovery",
-      "at": "2026-06-03T22:05:09.179Z"
+      "at": "2026-06-04T02:15:39.822Z"
     },
     {
       "type": "step",
       "step": "entry-and-context",
-      "at": "2026-06-03T22:05:09.569Z"
+      "at": "2026-06-04T02:15:40.103Z"
     },
     {
       "type": "step",
       "step": "taste-profile",
-      "at": "2026-06-03T22:05:10.890Z"
+      "at": "2026-06-04T02:15:43.447Z"
     },
     {
       "type": "step",
       "step": "reaction-loop",
-      "at": "2026-06-03T22:05:12.230Z"
+      "at": "2026-06-04T02:15:44.683Z"
     },
     {
       "type": "step",
       "step": "open-buying-plan",
-      "at": "2026-06-03T22:05:12.930Z"
+      "at": "2026-06-04T02:15:45.579Z"
     },
     {
       "type": "step",
       "step": "complete-buying-plan",
-      "at": "2026-06-03T22:05:13.083Z"
+      "at": "2026-06-04T02:15:45.729Z"
     }
   ],
   "flowEnded": "http://127.0.0.1:4173/help.html",
@@ -139,7 +139,7 @@
   },
   "checkpoints": [
     {
-      "at": "2026-06-03T22:05:09.569Z",
+      "at": "2026-06-04T02:15:40.102Z",
       "label": "entry-screen",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -173,7 +173,7 @@
       }
     },
     {
-      "at": "2026-06-03T22:05:12.907Z",
+      "at": "2026-06-04T02:15:45.556Z",
       "label": "shortlist-results",
       "detail": {
         "reactionCardsCompleted": 1
@@ -234,7 +234,7 @@
       }
     },
     {
-      "at": "2026-06-03T22:05:13.051Z",
+      "at": "2026-06-04T02:15:45.700Z",
       "label": "buying-plan-opened",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -282,6 +282,13 @@
           "href": "",
           "disabled": false,
           "isSmall": false
+        },
+        {
+          "text": "Browse used listings",
+          "action": "",
+          "href": "https://pinside.com/pinball/machine/medieval-madness-remake-special/market?utm_source=pinball-scout&utm_medium=referral&utm_campaign=buying-guide&utm_content=medieval-madness-remake&utm_term=sourcing-listings",
+          "disabled": false,
+          "isSmall": false
         }
       ],
       "decisionState": {
@@ -314,7 +321,7 @@
       }
     },
     {
-      "at": "2026-06-03T22:05:16.438Z",
+      "at": "2026-06-04T02:15:48.979Z",
       "label": "decision-brief",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -375,8 +382,8 @@
   "confusionFlags": [
     {
       "flag": "primary-action-overload",
-      "detail": "buying-plan-opened shows 6 visible primary buttons.",
-      "at": "2026-06-03T22:05:13.051Z"
+      "detail": "buying-plan-opened shows 7 visible primary buttons.",
+      "at": "2026-06-04T02:15:45.700Z"
     }
   ],
   "deadEndStates": [],

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "startedAt": "2026-06-03T22:05:25.856Z",
-  "finishedAt": "2026-06-03T22:05:33.662Z",
+  "startedAt": "2026-06-04T02:15:57.448Z",
+  "finishedAt": "2026-06-04T02:16:04.566Z",
   "testTitle": "Pinball Enthusiast uses calibration path with polarized reactions and gets a non-generic shortlist",
   "personaName": "The Pinball Enthusiast",
   "personaId": "pinball-enthusiast",
@@ -33,32 +33,32 @@
     {
       "type": "step",
       "step": "open-discovery",
-      "at": "2026-06-03T22:05:25.856Z"
+      "at": "2026-06-04T02:15:57.449Z"
     },
     {
       "type": "step",
       "step": "entry-and-context",
-      "at": "2026-06-03T22:05:26.227Z"
+      "at": "2026-06-04T02:15:57.744Z"
     },
     {
       "type": "step",
       "step": "taste-profile",
-      "at": "2026-06-03T22:05:27.530Z"
+      "at": "2026-06-04T02:15:58.949Z"
     },
     {
       "type": "step",
       "step": "reaction-loop",
-      "at": "2026-06-03T22:05:28.842Z"
+      "at": "2026-06-04T02:16:00.208Z"
     },
     {
       "type": "step",
       "step": "open-buying-plan",
-      "at": "2026-06-03T22:05:29.535Z"
+      "at": "2026-06-04T02:16:01.195Z"
     },
     {
       "type": "step",
       "step": "complete-buying-plan",
-      "at": "2026-06-03T22:05:29.977Z"
+      "at": "2026-06-04T02:16:01.308Z"
     }
   ],
   "flowEnded": "http://127.0.0.1:4173/help.html",
@@ -139,7 +139,7 @@
   },
   "checkpoints": [
     {
-      "at": "2026-06-03T22:05:26.227Z",
+      "at": "2026-06-04T02:15:57.744Z",
       "label": "entry-screen",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -173,7 +173,7 @@
       }
     },
     {
-      "at": "2026-06-03T22:05:29.500Z",
+      "at": "2026-06-04T02:16:01.164Z",
       "label": "shortlist-results",
       "detail": {
         "reactionCardsCompleted": 2
@@ -234,7 +234,7 @@
       }
     },
     {
-      "at": "2026-06-03T22:05:29.956Z",
+      "at": "2026-06-04T02:16:01.285Z",
       "label": "buying-plan-opened",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -252,6 +252,13 @@
           "text": "Continue with this machine",
           "action": "plan-keep-pick",
           "href": "",
+          "disabled": false,
+          "isSmall": false
+        },
+        {
+          "text": "Browse used listings",
+          "action": "",
+          "href": "https://pinside.com/pinball/machine/medieval-madness-remake-special/market?utm_source=pinball-scout&utm_medium=referral&utm_campaign=buying-guide&utm_content=medieval-madness-remake&utm_term=sourcing-listings",
           "disabled": false,
           "isSmall": false
         }
@@ -286,7 +293,7 @@
       }
     },
     {
-      "at": "2026-06-03T22:05:33.624Z",
+      "at": "2026-06-04T02:16:04.541Z",
       "label": "decision-brief",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",

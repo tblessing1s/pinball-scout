@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "startedAt": "2026-06-03T22:05:34.364Z",
-  "finishedAt": "2026-06-03T22:05:37.305Z",
+  "startedAt": "2026-06-04T02:16:05.168Z",
+  "finishedAt": "2026-06-04T02:16:07.910Z",
   "testTitle": "Contrarian with mostly-negative reactions still reaches a usable shortlist",
   "personaName": "The Contrarian",
   "personaId": "the-contrarian",
@@ -32,27 +32,27 @@
     {
       "type": "step",
       "step": "open-discovery",
-      "at": "2026-06-03T22:05:34.364Z"
+      "at": "2026-06-04T02:16:05.168Z"
     },
     {
       "type": "step",
       "step": "entry-and-context",
-      "at": "2026-06-03T22:05:34.754Z"
+      "at": "2026-06-04T02:16:05.502Z"
     },
     {
       "type": "step",
       "step": "taste-profile",
-      "at": "2026-06-03T22:05:35.237Z"
+      "at": "2026-06-04T02:16:05.943Z"
     },
     {
       "type": "step",
       "step": "reaction-loop",
-      "at": "2026-06-03T22:05:36.503Z"
+      "at": "2026-06-04T02:16:07.188Z"
     },
     {
       "type": "step",
       "step": "open-buying-plan",
-      "at": "2026-06-03T22:05:37.200Z"
+      "at": "2026-06-04T02:16:07.822Z"
     }
   ],
   "flowEnded": "http://127.0.0.1:4173/help.html",
@@ -94,6 +94,13 @@
         "href": "",
         "disabled": false,
         "isSmall": false
+      },
+      {
+        "text": "Browse used listings",
+        "action": "",
+        "href": "https://pinside.com/pinball/machine/medieval-madness-remake-special/market?utm_source=pinball-scout&utm_medium=referral&utm_campaign=buying-guide&utm_content=medieval-madness-remake&utm_term=sourcing-listings",
+        "disabled": false,
+        "isSmall": false
       }
     ],
     "decisionState": {
@@ -127,7 +134,7 @@
   },
   "checkpoints": [
     {
-      "at": "2026-06-03T22:05:34.754Z",
+      "at": "2026-06-04T02:16:05.502Z",
       "label": "entry-screen",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -161,7 +168,7 @@
       }
     },
     {
-      "at": "2026-06-03T22:05:37.161Z",
+      "at": "2026-06-04T02:16:07.788Z",
       "label": "shortlist-results",
       "detail": {
         "reactionCardsCompleted": 2
@@ -222,7 +229,7 @@
       }
     },
     {
-      "at": "2026-06-03T22:05:37.275Z",
+      "at": "2026-06-04T02:16:07.885Z",
       "label": "buying-plan-opened",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -240,6 +247,13 @@
           "text": "Continue with this machine",
           "action": "plan-keep-pick",
           "href": "",
+          "disabled": false,
+          "isSmall": false
+        },
+        {
+          "text": "Browse used listings",
+          "action": "",
+          "href": "https://pinside.com/pinball/machine/medieval-madness-remake-special/market?utm_source=pinball-scout&utm_medium=referral&utm_campaign=buying-guide&utm_content=medieval-madness-remake&utm_term=sourcing-listings",
           "disabled": false,
           "isSmall": false
         }
