@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "startedAt": "2026-06-05T02:29:52.784Z",
-  "finishedAt": "2026-06-05T02:30:00.578Z",
+  "startedAt": "2026-06-05T02:55:39.356Z",
+  "finishedAt": "2026-06-05T02:55:46.764Z",
   "testTitle": "On-the-Fence Researcher lands on weak-signal results and still has a path forward",
   "personaName": "The On-the-Fence Researcher",
   "personaId": "on-the-fence-researcher",
@@ -33,32 +33,32 @@
     {
       "type": "step",
       "step": "open-discovery",
-      "at": "2026-06-05T02:29:52.784Z"
+      "at": "2026-06-05T02:55:39.356Z"
     },
     {
       "type": "step",
       "step": "entry-and-context",
-      "at": "2026-06-05T02:29:53.107Z"
+      "at": "2026-06-05T02:55:39.625Z"
     },
     {
       "type": "step",
       "step": "taste-profile",
-      "at": "2026-06-05T02:29:53.502Z"
+      "at": "2026-06-05T02:55:40.100Z"
     },
     {
       "type": "step",
       "step": "reaction-loop",
-      "at": "2026-06-05T02:29:54.740Z"
+      "at": "2026-06-05T02:55:41.387Z"
     },
     {
       "type": "step",
       "step": "open-buying-plan",
-      "at": "2026-06-05T02:29:57.264Z"
+      "at": "2026-06-05T02:55:43.360Z"
     },
     {
       "type": "step",
       "step": "complete-buying-plan",
-      "at": "2026-06-05T02:29:57.350Z"
+      "at": "2026-06-05T02:55:43.458Z"
     }
   ],
   "flowEnded": "http://127.0.0.1:4173/help.html",
@@ -142,7 +142,7 @@
   },
   "checkpoints": [
     {
-      "at": "2026-06-05T02:29:53.107Z",
+      "at": "2026-06-05T02:55:39.625Z",
       "label": "entry-screen",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -176,7 +176,7 @@
       }
     },
     {
-      "at": "2026-06-05T02:29:57.223Z",
+      "at": "2026-06-05T02:55:43.318Z",
       "label": "shortlist-results",
       "detail": {
         "reactionCardsCompleted": 6
@@ -239,7 +239,7 @@
       }
     },
     {
-      "at": "2026-06-05T02:29:57.327Z",
+      "at": "2026-06-05T02:55:43.433Z",
       "label": "buying-plan-opened",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -300,7 +300,7 @@
       }
     },
     {
-      "at": "2026-06-05T02:30:00.550Z",
+      "at": "2026-06-05T02:55:46.726Z",
       "label": "decision-brief",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",

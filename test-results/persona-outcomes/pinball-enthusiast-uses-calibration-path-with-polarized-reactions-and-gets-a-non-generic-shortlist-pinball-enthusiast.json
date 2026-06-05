@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "startedAt": "2026-06-05T02:30:01.034Z",
-  "finishedAt": "2026-06-05T02:30:07.955Z",
+  "startedAt": "2026-06-05T02:55:47.295Z",
+  "finishedAt": "2026-06-05T02:55:55.178Z",
   "testTitle": "Pinball Enthusiast uses calibration path with polarized reactions and gets a non-generic shortlist",
   "personaName": "The Pinball Enthusiast",
   "personaId": "pinball-enthusiast",
@@ -33,32 +33,32 @@
     {
       "type": "step",
       "step": "open-discovery",
-      "at": "2026-06-05T02:30:01.034Z"
+      "at": "2026-06-05T02:55:47.295Z"
     },
     {
       "type": "step",
       "step": "entry-and-context",
-      "at": "2026-06-05T02:30:01.339Z"
+      "at": "2026-06-05T02:55:47.566Z"
     },
     {
       "type": "step",
       "step": "taste-profile",
-      "at": "2026-06-05T02:30:02.401Z"
+      "at": "2026-06-05T02:55:48.889Z"
     },
     {
       "type": "step",
       "step": "reaction-loop",
-      "at": "2026-06-05T02:30:03.635Z"
+      "at": "2026-06-05T02:55:50.294Z"
     },
     {
       "type": "step",
       "step": "open-buying-plan",
-      "at": "2026-06-05T02:30:04.591Z"
+      "at": "2026-06-05T02:55:51.472Z"
     },
     {
       "type": "step",
       "step": "complete-buying-plan",
-      "at": "2026-06-05T02:30:04.726Z"
+      "at": "2026-06-05T02:55:51.753Z"
     }
   ],
   "flowEnded": "http://127.0.0.1:4173/help.html",
@@ -139,7 +139,7 @@
   },
   "checkpoints": [
     {
-      "at": "2026-06-05T02:30:01.339Z",
+      "at": "2026-06-05T02:55:47.566Z",
       "label": "entry-screen",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -173,7 +173,7 @@
       }
     },
     {
-      "at": "2026-06-05T02:30:04.548Z",
+      "at": "2026-06-05T02:55:51.436Z",
       "label": "shortlist-results",
       "detail": {
         "reactionCardsCompleted": 2
@@ -234,7 +234,7 @@
       }
     },
     {
-      "at": "2026-06-05T02:30:04.700Z",
+      "at": "2026-06-05T02:55:51.647Z",
       "label": "buying-plan-opened",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -293,7 +293,7 @@
       }
     },
     {
-      "at": "2026-06-05T02:30:07.934Z",
+      "at": "2026-06-05T02:55:55.133Z",
       "label": "decision-brief",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",

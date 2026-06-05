@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "startedAt": "2026-06-05T02:30:11.540Z",
-  "finishedAt": "2026-06-05T02:30:15.394Z",
+  "startedAt": "2026-06-05T02:55:59.027Z",
+  "finishedAt": "2026-06-05T02:56:02.551Z",
   "testTitle": "Theme-Driven Buyer uses compare flow and keeps front-runner continuity on resume",
   "personaName": "The Theme-Driven Buyer",
   "personaId": "theme-driven-buyer",
@@ -34,37 +34,37 @@
     {
       "type": "step",
       "step": "open-discovery",
-      "at": "2026-06-05T02:30:11.540Z"
+      "at": "2026-06-05T02:55:59.027Z"
     },
     {
       "type": "step",
       "step": "entry-and-context",
-      "at": "2026-06-05T02:30:11.821Z"
+      "at": "2026-06-05T02:55:59.402Z"
     },
     {
       "type": "step",
       "step": "taste-profile",
-      "at": "2026-06-05T02:30:12.183Z"
+      "at": "2026-06-05T02:55:59.830Z"
     },
     {
       "type": "step",
       "step": "reaction-loop",
-      "at": "2026-06-05T02:30:13.402Z"
+      "at": "2026-06-05T02:56:01.107Z"
     },
     {
       "type": "step",
       "step": "open-compare",
-      "at": "2026-06-05T02:30:14.777Z"
+      "at": "2026-06-05T02:56:01.755Z"
     },
     {
       "type": "step",
       "step": "compare-front-runner",
-      "at": "2026-06-05T02:30:15.008Z"
+      "at": "2026-06-05T02:56:02.037Z"
     },
     {
       "type": "step",
       "step": "front-runner-continuity",
-      "at": "2026-06-05T02:30:15.154Z"
+      "at": "2026-06-05T02:56:02.220Z"
     }
   ],
   "flowEnded": "http://127.0.0.1:4173/help.html?resume=1",
@@ -146,7 +146,7 @@
   },
   "checkpoints": [
     {
-      "at": "2026-06-05T02:30:11.821Z",
+      "at": "2026-06-05T02:55:59.402Z",
       "label": "entry-screen",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -180,7 +180,7 @@
       }
     },
     {
-      "at": "2026-06-05T02:30:14.753Z",
+      "at": "2026-06-05T02:56:01.718Z",
       "label": "shortlist-results",
       "detail": {
         "reactionCardsCompleted": 2
@@ -241,35 +241,13 @@
       }
     },
     {
-      "at": "2026-06-05T02:30:14.987Z",
+      "at": "2026-06-05T02:56:01.968Z",
       "label": "compare-opened",
       "detail": {},
       "url": "http://127.0.0.1:4173/compare.html",
       "heading": "Pick One Now",
       "readinessSummary": "",
-      "visiblePrimaryButtons": [
-        {
-          "text": "Start tie-breaker",
-          "action": "tie-breaker-start",
-          "href": "",
-          "disabled": false,
-          "isSmall": false
-        },
-        {
-          "text": "Set as front-runner",
-          "action": "choose-front-runner:medieval-madness-remake",
-          "href": "",
-          "disabled": false,
-          "isSmall": true
-        },
-        {
-          "text": "Set as front-runner",
-          "action": "choose-front-runner:attack-from-mars-remake",
-          "href": "",
-          "disabled": false,
-          "isSmall": true
-        }
-      ],
+      "visiblePrimaryButtons": [],
       "decisionState": {
         "frontRunnerSlug": "medieval-madness-remake",
         "backupSlugs": [
@@ -280,7 +258,7 @@
         "compareState": {
           "presetMode": "balanced",
           "compareMode": "pick-one-now",
-          "tooClose": true,
+          "tooClose": false,
           "selectedSlugs": [
             "medieval-madness-remake",
             "attack-from-mars-remake"
@@ -300,7 +278,7 @@
       }
     },
     {
-      "at": "2026-06-05T02:30:15.135Z",
+      "at": "2026-06-05T02:56:02.201Z",
       "label": "compare-front-runner-selected",
       "detail": {},
       "url": "http://127.0.0.1:4173/compare.html",
@@ -359,7 +337,7 @@
       }
     },
     {
-      "at": "2026-06-05T02:30:15.376Z",
+      "at": "2026-06-05T02:56:02.525Z",
       "label": "resume-after-compare",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html?resume=1",

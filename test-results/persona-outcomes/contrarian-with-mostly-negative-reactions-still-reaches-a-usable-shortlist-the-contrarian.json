@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "startedAt": "2026-06-05T02:30:08.431Z",
-  "finishedAt": "2026-06-05T02:30:11.155Z",
+  "startedAt": "2026-06-05T02:55:55.796Z",
+  "finishedAt": "2026-06-05T02:55:58.522Z",
   "testTitle": "Contrarian with mostly-negative reactions still reaches a usable shortlist",
   "personaName": "The Contrarian",
   "personaId": "the-contrarian",
@@ -32,27 +32,27 @@
     {
       "type": "step",
       "step": "open-discovery",
-      "at": "2026-06-05T02:30:08.431Z"
+      "at": "2026-06-05T02:55:55.797Z"
     },
     {
       "type": "step",
       "step": "entry-and-context",
-      "at": "2026-06-05T02:30:08.700Z"
+      "at": "2026-06-05T02:55:56.084Z"
     },
     {
       "type": "step",
       "step": "taste-profile",
-      "at": "2026-06-05T02:30:09.083Z"
+      "at": "2026-06-05T02:55:56.522Z"
     },
     {
       "type": "step",
       "step": "reaction-loop",
-      "at": "2026-06-05T02:30:10.301Z"
+      "at": "2026-06-05T02:55:57.777Z"
     },
     {
       "type": "step",
       "step": "open-buying-plan",
-      "at": "2026-06-05T02:30:11.056Z"
+      "at": "2026-06-05T02:55:58.429Z"
     }
   ],
   "flowEnded": "http://127.0.0.1:4173/help.html",
@@ -134,7 +134,7 @@
   },
   "checkpoints": [
     {
-      "at": "2026-06-05T02:30:08.700Z",
+      "at": "2026-06-05T02:55:56.084Z",
       "label": "entry-screen",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -168,7 +168,7 @@
       }
     },
     {
-      "at": "2026-06-05T02:30:11.020Z",
+      "at": "2026-06-05T02:55:58.389Z",
       "label": "shortlist-results",
       "detail": {
         "reactionCardsCompleted": 2
@@ -229,7 +229,7 @@
       }
     },
     {
-      "at": "2026-06-05T02:30:11.133Z",
+      "at": "2026-06-05T02:55:58.492Z",
       "label": "buying-plan-opened",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
