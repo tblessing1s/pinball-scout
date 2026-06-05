@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "startedAt": "2026-06-04T21:39:07.215Z",
-  "finishedAt": "2026-06-04T21:39:13.461Z",
+  "startedAt": "2026-06-05T01:05:22.318Z",
+  "finishedAt": "2026-06-05T01:05:29.232Z",
   "testTitle": "Practical Buyer validates blocker/readiness flow and reaches decision brief",
   "personaName": "The Practical / Low-Regret Buyer",
   "personaId": "practical-low-regret-buyer",
@@ -33,32 +33,32 @@
     {
       "type": "step",
       "step": "open-discovery",
-      "at": "2026-06-04T21:39:07.215Z"
+      "at": "2026-06-05T01:05:22.319Z"
     },
     {
       "type": "step",
       "step": "entry-and-context",
-      "at": "2026-06-04T21:39:07.435Z"
+      "at": "2026-06-05T01:05:22.540Z"
     },
     {
       "type": "step",
       "step": "taste-profile",
-      "at": "2026-06-04T21:39:07.826Z"
+      "at": "2026-06-05T01:05:22.933Z"
     },
     {
       "type": "step",
       "step": "reaction-loop",
-      "at": "2026-06-04T21:39:09.047Z"
+      "at": "2026-06-05T01:05:24.166Z"
     },
     {
       "type": "step",
       "step": "open-buying-plan",
-      "at": "2026-06-04T21:39:10.150Z"
+      "at": "2026-06-05T01:05:25.831Z"
     },
     {
       "type": "step",
       "step": "complete-buying-plan",
-      "at": "2026-06-04T21:39:10.258Z"
+      "at": "2026-06-05T01:05:25.913Z"
     }
   ],
   "flowEnded": "http://127.0.0.1:4173/help.html",
@@ -139,7 +139,7 @@
   },
   "checkpoints": [
     {
-      "at": "2026-06-04T21:39:07.435Z",
+      "at": "2026-06-05T01:05:22.540Z",
       "label": "entry-screen",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -173,7 +173,7 @@
       }
     },
     {
-      "at": "2026-06-04T21:39:10.124Z",
+      "at": "2026-06-05T01:05:25.804Z",
       "label": "shortlist-results",
       "detail": {
         "reactionCardsCompleted": 2
@@ -234,7 +234,7 @@
       }
     },
     {
-      "at": "2026-06-04T21:39:10.235Z",
+      "at": "2026-06-05T01:05:25.888Z",
       "label": "buying-plan-opened",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -321,7 +321,7 @@
       }
     },
     {
-      "at": "2026-06-04T21:39:13.436Z",
+      "at": "2026-06-05T01:05:29.206Z",
       "label": "decision-brief",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -383,7 +383,7 @@
     {
       "flag": "primary-action-overload",
       "detail": "buying-plan-opened shows 7 visible primary buttons.",
-      "at": "2026-06-04T21:39:10.235Z"
+      "at": "2026-06-05T01:05:25.888Z"
     }
   ],
   "deadEndStates": [],
