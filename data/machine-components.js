@@ -318,6 +318,32 @@ export const MACHINE_COMPONENTS = {
 };
 
 /**
+ * Display names for machines that appear in MACHINE_COMPONENTS but not in the
+ * primary machines.js catalog. Used by Pinball Map name-matching and UI rendering.
+ */
+export const COMPONENT_MACHINE_NAMES = {
+  "addams-family": "The Addams Family",
+  "twilight-zone": "The Twilight Zone",
+  "whitewater": "White Water",
+  "scared-stiff": "Scared Stiff",
+  "bride-of-pinbot": "Bride of Pin*Bot",
+  "acdc-pro": "AC/DC",
+  "metallica-pro": "Metallica",
+  "walking-dead-pro": "The Walking Dead",
+  "game-of-thrones-pro": "Game of Thrones",
+  "star-wars-pro": "Star Wars",
+  "guardians-of-the-galaxy-pro": "Guardians of the Galaxy",
+  "aerosmith-pro": "Aerosmith",
+  "black-knight-sword-of-rage-pro": "Black Knight: Sword of Rage",
+  "munsters-pro": "The Munsters",
+  "led-zeppelin-pro": "Led Zeppelin",
+  "rush-pro": "Rush",
+  "spider-man-vault": "Spider-Man",
+  "ghostbusters-pro": "Ghostbusters",
+  "batman-dark-knight": "Batman"
+};
+
+/**
  * Returns the component IDs for a machine slug, or [] if unknown.
  */
 export function componentsForMachine(slug) {
