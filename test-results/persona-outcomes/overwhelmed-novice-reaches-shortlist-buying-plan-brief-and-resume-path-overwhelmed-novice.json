@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "startedAt": "2026-06-05T02:55:08.012Z",
-  "finishedAt": "2026-06-05T02:55:18.553Z",
+  "startedAt": "2026-06-06T11:25:18.349Z",
+  "finishedAt": "2026-06-06T11:25:30.762Z",
   "testTitle": "Overwhelmed Novice reaches shortlist, buying plan, brief, and resume path",
   "personaName": "The Overwhelmed Novice",
   "personaId": "overwhelmed-novice",
@@ -34,37 +34,37 @@
     {
       "type": "step",
       "step": "open-discovery",
-      "at": "2026-06-05T02:55:08.012Z"
+      "at": "2026-06-06T11:25:18.350Z"
     },
     {
       "type": "step",
       "step": "entry-and-context",
-      "at": "2026-06-05T02:55:09.531Z"
+      "at": "2026-06-06T11:25:20.983Z"
     },
     {
       "type": "step",
       "step": "taste-profile",
-      "at": "2026-06-05T02:55:10.102Z"
+      "at": "2026-06-06T11:25:21.606Z"
     },
     {
       "type": "step",
       "step": "reaction-loop",
-      "at": "2026-06-05T02:55:11.439Z"
+      "at": "2026-06-06T11:25:22.991Z"
     },
     {
       "type": "step",
       "step": "open-buying-plan",
-      "at": "2026-06-05T02:55:14.297Z"
+      "at": "2026-06-06T11:25:25.979Z"
     },
     {
       "type": "step",
       "step": "complete-buying-plan",
-      "at": "2026-06-05T02:55:14.402Z"
+      "at": "2026-06-06T11:25:26.443Z"
     },
     {
       "type": "step",
       "step": "resume-reentry-check",
-      "at": "2026-06-05T02:55:18.158Z"
+      "at": "2026-06-06T11:25:30.389Z"
     }
   ],
   "flowEnded": "http://127.0.0.1:4173/help.html?resume=1&brief=1",
@@ -148,7 +148,7 @@
   },
   "checkpoints": [
     {
-      "at": "2026-06-05T02:55:09.531Z",
+      "at": "2026-06-06T11:25:20.983Z",
       "label": "entry-screen",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -182,7 +182,7 @@
       }
     },
     {
-      "at": "2026-06-05T02:55:14.257Z",
+      "at": "2026-06-06T11:25:25.937Z",
       "label": "shortlist-results",
       "detail": {
         "reactionCardsCompleted": 6
@@ -252,7 +252,7 @@
       }
     },
     {
-      "at": "2026-06-05T02:55:14.367Z",
+      "at": "2026-06-06T11:25:26.416Z",
       "label": "buying-plan-opened",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -313,7 +313,7 @@
       }
     },
     {
-      "at": "2026-06-05T02:55:18.129Z",
+      "at": "2026-06-06T11:25:30.351Z",
       "label": "decision-brief",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html",
@@ -374,7 +374,7 @@
       }
     },
     {
-      "at": "2026-06-05T02:55:18.522Z",
+      "at": "2026-06-06T11:25:30.719Z",
       "label": "resume-decision-brief",
       "detail": {},
       "url": "http://127.0.0.1:4173/help.html?resume=1&brief=1",
@@ -439,7 +439,7 @@
     {
       "flag": "primary-action-overload",
       "detail": "shortlist-results shows 4 visible primary buttons.",
-      "at": "2026-06-05T02:55:14.257Z"
+      "at": "2026-06-06T11:25:25.936Z"
     }
   ],
   "deadEndStates": [],
